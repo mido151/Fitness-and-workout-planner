@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Fit 99 - Workouts & Performance Library</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .frosted-glass {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(186, 230, 253, 0.65);
+      box-shadow: 0 8px 32px 0 rgba(186, 230, 253, 0.28), 0 1px 2px rgba(14, 165, 233, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-[#f0f9ff] via-[#e6f4fe] to-[#dbeafe] font-['Inter'] text-slate-800 antialiased min-h-screen selection:bg-sky-200 selection:text-sky-900 flex flex-col justify-between">
+
+  <!-- Unified Navigation Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-sky-200/70 shadow-[0_4px_20px_rgba(186,230,253,0.35)]">
+    <div class="h-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-6">
+        <a class="flex items-center gap-2.5 group" href="dashboard.html">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-sky-500 to-sky-400 flex items-center justify-center shadow-md shadow-sky-400/30">
+            <span class="font-black text-white text-lg tracking-tight">99</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-slate-900 tracking-tight text-lg leading-tight flex items-center gap-1 font-['Outfit']">
+              FIT <span class="text-sky-600">99</span>
+            </span>
+            <span class="text-[9px] font-bold uppercase tracking-widest text-sky-600">Glacier Performance</span>
+          </div>
+        </a>
+        <nav class="hidden xl:flex items-center gap-1 text-xs font-semibold">
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="dashboard.html">Overview</a>
+          <a class="px-3 py-1.5 rounded-full transition-all bg-sky-500 text-white shadow-sm" href="exercises.html">Workouts</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="exercise-detail.html">Active Routine</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="routine-builder.html">Workout Builder</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="nutrition.html">Nutrition</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="food-log.html">Log Food</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="profile.html">Profile &amp; Metrics</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="index.html">Club Tour</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-3">
+        <a class="px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-semibold text-xs hover:bg-sky-100 transition-colors flex items-center gap-1.5" href="login.html">
+          <span class="material-symbols-outlined text-[16px]">contactless</span>
+          <span>Cairo Gate</span>
+        </a>
+        <div class="h-6 w-px bg-sky-200 hidden sm:block"></div>
+        <a class="flex items-center gap-2 pl-1 group" href="profile.html">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-sky-400 to-sky-600 flex items-center justify-center text-white text-xs font-bold shadow-sm">
+            OH
+          </div>
+          <div class="hidden md:flex flex-col text-left">
+            <span class="text-xs text-slate-900 font-bold leading-tight group-hover:text-sky-600 transition-colors">Omar Hassan</span>
+            <span class="text-[10px] text-sky-600 font-bold uppercase tracking-wider">Pro Athlete</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Quick Sub-bar -->
+  <div class="xl:hidden fixed top-16 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-sky-200/50 px-4 py-2 overflow-x-auto flex gap-2">
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="dashboard.html">Overview</a>
+    <a class="text-xs px-3 py-1 rounded-full bg-sky-500 text-white font-semibold whitespace-nowrap" href="exercises.html">Workouts</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="exercise-detail.html">Active Routine</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="routine-builder.html">Builder</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="nutrition.html">Nutrition</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="food-log.html">Food Log</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="profile.html">Profile</a>
+  </div>
+
+  <main class="w-full pt-20 xl:pt-20 min-h-[calc(100vh-4rem)] pb-16">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-8">
+      
+      <!-- Quick Status Ribbon / Club Pass -->
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-4 w-full">
+        <!-- Pass status -->
+        <div class="lg:col-span-5 min-w-0 bg-white/80 backdrop-blur-xl border border-sky-200/70 rounded-2xl p-5 shadow-sm flex items-center justify-between gap-4">
+          <div class="flex items-center gap-4 min-w-0">
+            <div class="relative flex-shrink-0 w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 shadow-inner">
+              <span class="material-symbols-outlined text-2xl">badge</span>
+              <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-500 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-600"></span>
+              </span>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="text-xs uppercase tracking-widest text-sky-600 font-bold">Club Access</span>
+                <span class="px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-full bg-sky-100 text-sky-700">Active</span>
+              </div>
+              <h2 class="text-base font-bold text-slate-900 truncate">Fit 99 Zamalek Arena</h2>
+              <p class="text-xs text-slate-500 truncate">Turnstile NFC ready · Peak hours 17:00 - 20:00</p>
+            </div>
+          </div>
+          <a href="login.html" class="flex-shrink-0 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-xs font-semibold text-white transition flex items-center gap-1.5 shadow-sm">
+            <span>Digital Key</span>
+            <span class="material-symbols-outlined text-sm">contactless</span>
+          </a>
+        </div>
+
+        <!-- Upcoming Booking Alert -->
+        <div class="lg:col-span-7 min-w-0 bg-white/80 backdrop-blur-xl border border-sky-200/70 rounded-2xl p-5 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-4 min-w-0">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center text-cyan-700 shadow-inner">
+              <span class="material-symbols-outlined text-2xl">directions_bike</span>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="text-xs uppercase tracking-widest text-cyan-700 font-bold">Booked Session Alert</span>
+                <span class="px-2 py-0.5 text-[10px] rounded-full bg-slate-100 text-slate-700 font-medium">Spot #07</span>
+              </div>
+              <h2 class="text-base font-bold text-slate-900 truncate">Today · 18:30 Spinning with Coach Nour</h2>
+              <p class="text-xs text-slate-500 truncate">Studio A · 45 Min High Intensity · Starts in 2h 15m</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 self-end sm:self-center">
+            <a href="routine-builder.html" class="px-3.5 py-2 rounded-xl bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-700 hover:bg-sky-100 transition">
+              Custom Builder
+            </a>
+            <a href="exercise-detail.html" class="px-4 py-2 rounded-xl bg-sky-600 text-white text-xs font-semibold hover:bg-sky-700 transition flex items-center gap-1.5 shadow-md">
+              <span>View Routine</span>
+              <span class="material-symbols-outlined text-sm">login</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search, Filters, and Stats Header Bar -->
+      <section class="flex flex-col gap-5 bg-white/85 backdrop-blur-2xl border border-sky-200/70 rounded-2xl p-6 lg:p-8 shadow-sm">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div>
+            <div class="flex items-center gap-2.5 mb-1.5">
+              <span class="h-2 w-2 rounded-full bg-sky-500 shadow-[0_0_8px_#7dd3fc]"></span>
+              <span class="text-xs font-bold uppercase tracking-widest text-sky-600">Catalog Directory · Glacier Engine 4.2</span>
+            </div>
+            <h1 class="text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight font-['Outfit']">Workouts &amp; Performance Library</h1>
+            <p class="text-sm text-slate-500 mt-1">Explore 420+ strength sequences, calibrated splits, and boutique studio reservations.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="px-3.5 py-2 rounded-xl bg-sky-50 border border-sky-200/70 text-xs text-slate-600 flex items-center gap-2 shadow-sm">
+              <span class="text-sky-600 font-bold">428</span> Exercises
+            </div>
+            <div class="px-3.5 py-2 rounded-xl bg-sky-50 border border-sky-200/70 text-xs text-slate-600 flex items-center gap-2 shadow-sm">
+              <span class="text-cyan-600 font-bold">64</span> Routine Packs
+            </div>
+            <a href="routine-builder.html" class="px-4 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-sky-600 text-white text-xs font-bold hover:shadow-md transition flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">add_circle</span>
+              <span>Build Workout</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+          <button class="px-4 py-2 rounded-full text-xs font-semibold bg-sky-600 text-white shadow-sm transition">All Programs</button>
+          <button class="px-4 py-2 rounded-full text-xs font-medium bg-white border border-sky-200 text-slate-600 hover:text-slate-900 transition">Strength</button>
+          <button class="px-4 py-2 rounded-full text-xs font-medium bg-white border border-sky-200 text-slate-600 hover:text-slate-900 transition">Hypertrophy</button>
+          <button class="px-4 py-2 rounded-full text-xs font-medium bg-white border border-sky-200 text-slate-600 hover:text-slate-900 transition">HIIT</button>
+          <button class="px-4 py-2 rounded-full text-xs font-medium bg-white border border-sky-200 text-slate-600 hover:text-slate-900 transition">Mobility</button>
+          <button class="px-4 py-2 rounded-full text-xs font-medium bg-white border border-sky-200 text-slate-600 hover:text-slate-900 transition">Powerlifting</button>
+          <button class="px-4 py-2 rounded-full text-xs font-medium bg-white border border-sky-200 text-slate-600 hover:text-slate-900 transition">Studio Classes</button>
+        </div>
+      </section>
+
+      <!-- Curated Training Programs 3-Column Grid -->
+      <section class="flex flex-col gap-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Glacier Series</span>
+              <span class="h-1.5 w-1.5 rounded-full bg-sky-500"></span>
+              <span class="text-xs text-slate-500">Recommended for your cadence</span>
+            </div>
+            <h2 class="text-xl font-bold text-slate-900 tracking-tight mt-0.5 font-['Outfit']">Curated Training Programs</h2>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-semibold text-slate-500">6 Recommended Routines</span>
+          </div>
+        </div>
+
+        <!-- 3-Column Grid with Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
+          
+          <!-- Card 1: Upper Body Power -->
+          <article class="bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-slate-900">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOZW38EVFZ2qrdbNeAPGr19UCFYYODwk1F8WOjYDPeQdV3z_2vdcKK-YZ_S--8-qYNO1oHU1OCg-5UZuSbf16kSZU8yvd0Rmak4h-KIHT4Jt1zoEHzr3V-cu5BsdZfNOOjdcCA6UydWfkK_kgKDgJ9ySS3TU_qvSG4Km4K05a-T4IpCpdk6eBEqlMBTunknZKbOuaFe_N0-puhFuVOnAnlzz4equt5k0cq558DnczQ9a_QoJ2VCBM2Lg');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div class="absolute top-4 left-4 flex gap-2">
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-sky-600 text-white uppercase tracking-wider">Strength</span>
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-medium bg-white/80 backdrop-blur-md text-slate-800 uppercase tracking-wider">Intermediate</span>
+                </div>
+                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md rounded-full px-2.5 py-1 text-[11px] font-semibold text-sky-700 flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-xs">local_fire_department</span>
+                  <span>320 kcal</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center gap-2 text-xs text-slate-500">
+                  <span class="material-symbols-outlined text-sm text-sky-600">person</span>
+                  <span>Coach Karim Adel</span>
+                  <span>·</span>
+                  <span class="material-symbols-outlined text-sm">schedule</span>
+                  <span>45 min</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Upper Body Power</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                  Compound pressing dynamics paired with mechanical tension accessories designed to peak athletic power output and shoulder stability.
+                </p>
+                <div class="grid grid-cols-2 gap-2 mt-2 pt-3 bg-sky-50/70 border border-sky-100 rounded-xl p-3 text-xs">
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Exercises</span>
+                    <span class="font-bold text-slate-800">5 Movements</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Target Focus</span>
+                    <span class="font-bold text-sky-600 truncate block">Chest / Delts / Triceps</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="exercise-detail.html" class="w-full py-3 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 shadow-sm">
+                <span>Start Routine</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Leg Day Intensity -->
+          <article class="bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-slate-900">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAE96pelGIzUcRino8FowWw3-gzHw0ZWmetorJqh_YqCe3KeMomnBIH5aTcHbCxSWdx4c8N-iaqc6_ZL0trGXzwuLhX0zyPbNh5vgNJTKxvX2IPcTEDeYtCT2NodLlVN3Sa9We3-18hFJyit3sh50nEIQB8R0tHRmpMhGh9h3xDYdTYGjohj7KkEDkL-0i3H_uOZba3OdxVo1WlbOw1oruNQ-8oqLl3I7jOoxQEtWh5-nJ5VKUgCCQykw');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div class="absolute top-4 left-4 flex gap-2">
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-cyan-600 text-white uppercase tracking-wider">Hypertrophy</span>
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-medium bg-white/80 backdrop-blur-md text-slate-800 uppercase tracking-wider">Advanced</span>
+                </div>
+                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md rounded-full px-2.5 py-1 text-[11px] font-semibold text-sky-700 flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-xs">local_fire_department</span>
+                  <span>480 kcal</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center gap-2 text-xs text-slate-500">
+                  <span class="material-symbols-outlined text-sm text-sky-600">verified</span>
+                  <span>Fit 99 Pro Program</span>
+                  <span>·</span>
+                  <span class="material-symbols-outlined text-sm">schedule</span>
+                  <span>60 min</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Leg Day Intensity</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                  High-volume posterior and quad hypertrophy loading protocols featuring cluster sets, tempo squats, and calf pump finishers.
+                </p>
+                <div class="grid grid-cols-2 gap-2 mt-2 pt-3 bg-sky-50/70 border border-sky-100 rounded-xl p-3 text-xs">
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Exercises</span>
+                    <span class="font-bold text-slate-800">6 Movements</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Target Focus</span>
+                    <span class="font-bold text-cyan-700 truncate block">Quads / Glutes / Hamstrings</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="exercise-detail.html" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-slate-200">
+                <span>View Workout Details</span>
+                <span class="material-symbols-outlined text-sm">visibility</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Spin & Sweat 45 -->
+          <article class="bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-slate-900">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARfKjYGTw8UAyehQFTbMT-6pf2GQBJVU8SDYd70fo0nrvtjyzD6zdkqrEkgY9mQx9xN2va3Qk8UMvcvNjEoSeNhCIWjqJW6_TbWo9OhOc9j86mNO3bCywaGW_aNunLJzQNRsyT9cNy1cHJpZur9RnTc9GcnBjlktQ46ylwmofybF8qn1PwE65skynAdbTgi15DKmiAMv2L6l8ur1krDYOIeofR7h1WQZv8IQFUrzFYCUtT9rtgGOIDmg');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div class="absolute top-4 left-4 flex gap-2">
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-600 text-white uppercase tracking-wider">Studio Class</span>
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-sky-500 text-white uppercase tracking-wider">HIIT</span>
+                </div>
+                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md rounded-full px-2.5 py-1 text-[11px] font-semibold text-emerald-700 flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-xs">group</span>
+                  <span>18 Riders Booked</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center gap-2 text-xs text-slate-500">
+                  <span class="material-symbols-outlined text-sm text-emerald-600">sports_gymnastics</span>
+                  <span>Coach Nour</span>
+                  <span>·</span>
+                  <span class="material-symbols-outlined text-sm">schedule</span>
+                  <span>45 min</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Spin &amp; Sweat 45</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                  Heart-rate synchronized climb intervals, sprint surges, and rhythmic high-cadence endurance bursts under atmospheric studio lighting.
+                </p>
+                <div class="flex flex-col gap-1.5 mt-2 pt-3 bg-sky-50/70 border border-sky-100 rounded-xl p-3 text-xs">
+                  <div class="flex justify-between text-[11px]">
+                    <span class="text-slate-500">Studio Occupancy (75%)</span>
+                    <span class="text-sky-700 font-semibold">6 Bikes Left</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-sky-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full w-3/4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="exercise-detail.html" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 shadow-sm">
+                <span>Reserve Bike Spot</span>
+                <span class="material-symbols-outlined text-sm">event_seat</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Core & Mobility Flow -->
+          <article class="bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-slate-900">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPCv9Rp3yEcziwIHpUpBFZceBdnJ7visBvnJl-bReci2Q-Tm-if0ZubvfAJu0CcLgcFMFfN85dWYXkYL6Rgx9UrXSCjAlB1RX1MRJDjRtJzXbJiZrJwExW5nNA7aCon1jW3JYjkjVrCSV5c_vR-um2RWwx_906pQyfGbwt_Z9kNrFx4afyRoweIguU8c2_PhvshM74tZZd40DFJ8OOfu6m2Zeh-QF-vLguhqrnjcMlCIp77W2ZSPHs4Q');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div class="absolute top-4 left-4 flex gap-2">
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-600 text-white uppercase tracking-wider">Mobility</span>
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-medium bg-white/80 backdrop-blur-md text-slate-800 uppercase tracking-wider">Beginner</span>
+                </div>
+                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md rounded-full px-2.5 py-1 text-[11px] font-semibold text-amber-700 flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-xs">self_improvement</span>
+                  <span>Active Recovery</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center gap-2 text-xs text-slate-500">
+                  <span class="material-symbols-outlined text-sm text-sky-600">spa</span>
+                  <span>Fit 99 Studio</span>
+                  <span>·</span>
+                  <span class="material-symbols-outlined text-sm">schedule</span>
+                  <span>30 min</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Core &amp; Mobility Flow</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                  Thoracic rotation, hip capsule opening drills, and deep pelvic stabilization designed to alleviate joint friction and reset posture.
+                </p>
+                <div class="grid grid-cols-2 gap-2 mt-2 pt-3 bg-sky-50/70 border border-sky-100 rounded-xl p-3 text-xs">
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Exercises</span>
+                    <span class="font-bold text-slate-800">5 Movements</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Target Focus</span>
+                    <span class="font-bold text-amber-700 truncate block">Hips / Spine / Core</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="exercise-detail.html" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-slate-200">
+                <span>Start Flow</span>
+                <span class="material-symbols-outlined text-sm">play_arrow</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5: Tactical Hypertrophy -->
+          <article class="bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-slate-900">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCT_pqbD-l0vtyo7O2On4RKzJMi4V6L2fwuRhuMGoNY_dJ217jDkfsrX8qGyNu_4V6o2ItTGucvneCpqKkQwF6qb2b1HsM1Npn4ctCEsygpP3gUOhkSCIEpdl69IVTWxwHEw3sLjNddu1XocBgByBYMtkkIVNv07N5lWZ6lN0JB8uhrHRnC2qFcIMZt0k45gIW1eq2_jUcZugEcjs4NH-Wn5LmEco4XyIghczfUPkuJI8jypEbL1WdFkQ');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div class="absolute top-4 left-4 flex gap-2">
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-sky-600 text-white uppercase tracking-wider">Hypertrophy</span>
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-medium bg-white/80 backdrop-blur-md text-slate-800 uppercase tracking-wider">Advanced</span>
+                </div>
+                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md rounded-full px-2.5 py-1 text-[11px] font-semibold text-sky-700 flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-xs">local_fire_department</span>
+                  <span>520 kcal</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center gap-2 text-xs text-slate-500">
+                  <span class="material-symbols-outlined text-sm text-sky-600">fitness_center</span>
+                  <span>Fit 99 Lab</span>
+                  <span>·</span>
+                  <span class="material-symbols-outlined text-sm">schedule</span>
+                  <span>55 min</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Tactical Hypertrophy - Chest &amp; Delts</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                  Engineered angles, constant cable tension curves, and lengthened-partial reps targeted at clavicular head growth and lateral delt caps.
+                </p>
+                <div class="grid grid-cols-2 gap-2 mt-2 pt-3 bg-sky-50/70 border border-sky-100 rounded-xl p-3 text-xs">
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Exercises</span>
+                    <span class="font-bold text-slate-800">5 Movements</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Target Focus</span>
+                    <span class="font-bold text-sky-600 truncate block">Upper Pectorals / Delts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="exercise-detail.html" class="w-full py-3 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 shadow-sm">
+                <span>Start Routine</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 6: Olympic Weightlifting Foundation -->
+          <article class="bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-slate-900">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBC9HeLUf9RY-WfoPMzodje-u10lhNWWVgqsUK6pf9Y9hR-88qJswnIPqhaA8rINw6qwtSigS1PxlSptm3wkTQwa8d96gaDmVGo2y_eDddDxLdcZeKHmV89uLQsVivsHmiAMsTLtbJeGPU7Fj7tya8Cp3gs_uU_qRn8jRLeJ1dMZlb1p9nS3eDCj8hdKu1HVyzdEqVLfk_RJQraizq9TgYVsG5SGhkvGmEwgADQ257sCoPvS82FtJc9jg');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div class="absolute top-4 left-4 flex gap-2">
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-purple-600 text-white uppercase tracking-wider">Powerlifting</span>
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-medium bg-white/80 backdrop-blur-md text-slate-800 uppercase tracking-wider">Intermediate</span>
+                </div>
+                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md rounded-full px-2.5 py-1 text-[11px] font-semibold text-purple-700 flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-xs">local_fire_department</span>
+                  <span>580 kcal</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-3">
+                <div class="flex items-center gap-2 text-xs text-slate-500">
+                  <span class="material-symbols-outlined text-sm text-sky-600">person</span>
+                  <span>Coach Karim</span>
+                  <span>·</span>
+                  <span class="material-symbols-outlined text-sm">schedule</span>
+                  <span>75 min</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Olympic Weightlifting Foundation</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                  Technical progressions for the snatch pull, clean contact points, and explosive triple extension coupled with heavy overhead squats.
+                </p>
+                <div class="grid grid-cols-2 gap-2 mt-2 pt-3 bg-sky-50/70 border border-sky-100 rounded-xl p-3 text-xs">
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Exercises</span>
+                    <span class="font-bold text-slate-800">5 Complexes</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 text-[11px] block">Target Focus</span>
+                    <span class="font-bold text-purple-700 truncate block">Triple Extension / Power</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="exercise-detail.html" class="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 shadow-sm">
+                <span>Start Routine</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Exercise Movement Table Directory -->
+      <section class="bg-white/85 backdrop-blur-2xl border border-sky-200/70 rounded-2xl p-6 lg:p-8 shadow-sm flex flex-col gap-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900 font-['Outfit']">Calibrated Exercise Bank</h2>
+            <p class="text-xs text-slate-500 mt-0.5">Biomechanical movements calibrated with optimal tension curves and safety cues.</p>
+          </div>
+          <a href="routine-builder.html" class="px-4 py-2 rounded-xl bg-sky-50 border border-sky-200 text-sky-700 hover:bg-sky-100 font-semibold text-xs transition flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base">tune</span>
+            <span>Configure Custom Routine</span>
+          </a>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="border-b border-sky-100 text-slate-400 font-semibold uppercase tracking-wider">
+                <th class="py-3 px-4">Movement</th>
+                <th class="py-3 px-4">Primary Target</th>
+                <th class="py-3 px-4">Equipment</th>
+                <th class="py-3 px-4">Difficulty</th>
+                <th class="py-3 px-4 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-sky-100/60 text-slate-700">
+              <tr class="hover:bg-sky-50/50 transition">
+                <td class="py-3.5 px-4 font-bold text-slate-900 flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 font-bold">1</div>
+                  <span>Barbell Flat Bench Press</span>
+                </td>
+                <td class="py-3.5 px-4">Pectoralis Major</td>
+                <td class="py-3.5 px-4">Olympic Barbell &amp; Rack</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded-full bg-sky-100 text-sky-700 font-semibold">Intermediate</span></td>
+                <td class="py-3.5 px-4 text-right">
+                  <a href="exercise-detail.html" class="text-sky-600 font-semibold hover:underline">View Cue</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-sky-50/50 transition">
+                <td class="py-3.5 px-4 font-bold text-slate-900 flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 font-bold">2</div>
+                  <span>Incline Dumbbell Press (30°)</span>
+                </td>
+                <td class="py-3.5 px-4">Clavicular Pectoral Head</td>
+                <td class="py-3.5 px-4">Adjustable Bench &amp; DBs</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded-full bg-sky-100 text-sky-700 font-semibold">Intermediate</span></td>
+                <td class="py-3.5 px-4 text-right">
+                  <a href="exercise-detail.html" class="text-sky-600 font-semibold hover:underline">View Cue</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-sky-50/50 transition">
+                <td class="py-3.5 px-4 font-bold text-slate-900 flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 font-bold">3</div>
+                  <span>Weighted Strict Pull-Up</span>
+                </td>
+                <td class="py-3.5 px-4">Latissimus Dorsi</td>
+                <td class="py-3.5 px-4">Pull-up Bar &amp; Dip Belt</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 font-semibold">Advanced</span></td>
+                <td class="py-3.5 px-4 text-right">
+                  <a href="exercise-detail.html" class="text-sky-600 font-semibold hover:underline">View Cue</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-sky-50/50 transition">
+                <td class="py-3.5 px-4 font-bold text-slate-900 flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 font-bold">4</div>
+                  <span>Seated Cable Neutral Row</span>
+                </td>
+                <td class="py-3.5 px-4">Rhomboids &amp; Mid Traps</td>
+                <td class="py-3.5 px-4">Dual Cable Pulley</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-semibold">Beginner</span></td>
+                <td class="py-3.5 px-4 text-right">
+                  <a href="exercise-detail.html" class="text-sky-600 font-semibold hover:underline">View Cue</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-sky-50/50 transition">
+                <td class="py-3.5 px-4 font-bold text-slate-900 flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 font-bold">5</div>
+                  <span>Rope Cable Face Pull</span>
+                </td>
+                <td class="py-3.5 px-4">Posterior Deltoids &amp; Rotators</td>
+                <td class="py-3.5 px-4">High Cable Attachment</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-semibold">All Levels</span></td>
+                <td class="py-3.5 px-4 text-right">
+                  <a href="exercise-detail.html" class="text-sky-600 font-semibold hover:underline">View Cue</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Unified Footer -->
+  <footer class="w-full bg-white/80 backdrop-blur-md border-t border-sky-200/70 py-6">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-full bg-sky-500 flex items-center justify-center">
+          <span class="text-xs text-white font-bold leading-none">99</span>
+        </div>
+        <span class="text-xs text-slate-500">© 2025 Fit 99 Performance Ecosystem. Glacier Companion Framework.</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold text-slate-500">
+        <a class="hover:text-sky-600 transition-colors" href="dashboard.html">Overview</a>
+        <a class="hover:text-sky-600 transition-colors" href="exercises.html">Workouts</a>
+        <a class="hover:text-sky-600 transition-colors" href="exercise-detail.html">Routine</a>
+        <a class="hover:text-sky-600 transition-colors" href="routine-builder.html">Builder</a>
+        <a class="hover:text-sky-600 transition-colors" href="nutrition.html">Nutrition</a>
+        <a class="hover:text-sky-600 transition-colors" href="food-log.html">Food Log</a>
+        <a class="hover:text-sky-600 transition-colors" href="profile.html">Profile</a>
+        <a class="hover:text-sky-600 transition-colors" href="index.html">Tour</a>
+        <a class="hover:text-sky-600 transition-colors" href="login.html">Cairo Gate</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
