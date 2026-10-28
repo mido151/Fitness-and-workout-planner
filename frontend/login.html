@@ -4,61 +4,58 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Fit 99 | Member Authentication &amp; Cairo Club Access</title>
+  <meta name="description" content="Sign in to Fit 99 to see your workouts, routines and nutrition plan.">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/output.css">
-  <style>
-    @layer base {
-      html, body { margin: 0; padding: 0; }
-    }
-    ::-webkit-scrollbar { display: none; }
-  </style>
 </head>
-<body class="bg-[#0a0e1a] text-[#e0e8f0] font-['Inter'] min-h-screen selection:bg-[#7dd3fc]/30 selection:text-[#7dd3fc] relative antialiased flex flex-col justify-between">
+<body class="bg-night text-frost font-sans min-h-screen selection:bg-ice/30 selection:text-ice relative antialiased flex flex-col justify-between">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-full focus:bg-ice focus:text-ink focus:text-sm focus:font-bold">Skip to main content</a>
 
   <!-- Ambient Glow Background -->
-  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-    <div class="absolute -top-48 left-1/4 w-[750px] h-[550px] bg-gradient-to-br from-[#7dd3fc]/12 via-[#0284c7]/8 to-transparent rounded-full blur-[140px]"></div>
-    <div class="absolute top-1/2 -right-32 w-[600px] h-[600px] bg-gradient-to-tr from-[#38bdf8]/10 via-[#0e4d6e]/20 to-transparent rounded-full blur-[160px]"></div>
-    <div class="absolute -bottom-40 left-10 w-[500px] h-[500px] bg-gradient-to-r from-[#7dd3fc]/8 to-transparent rounded-full blur-[130px]"></div>
+  <div aria-hidden="true" class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div class="absolute -top-48 left-1/4 w-[750px] h-[550px] bg-gradient-to-br from-ice/12 via-sky-600/8 to-transparent rounded-full blur-[140px]"></div>
+    <div class="absolute top-1/2 -right-32 w-[600px] h-[600px] bg-gradient-to-tr from-ice-strong/10 via-[#0e4d6e]/20 to-transparent rounded-full blur-[160px]"></div>
+    <div class="absolute -bottom-40 left-10 w-[500px] h-[500px] bg-gradient-to-r from-ice/8 to-transparent rounded-full blur-[130px]"></div>
   </div>
 
   <!-- Unified Navigation Header (Dark Variant) -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0f1524]/90 backdrop-blur-xl border-b border-[#2a3a48]/70 shadow-lg">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-night-header/90 backdrop-blur-xl border-b border-night-line/70 shadow-lg">
     <div class="h-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
       <div class="flex items-center gap-6">
         <a class="flex items-center gap-2.5 group" href="dashboard.html">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#7dd3fc] via-[#38bdf8] to-[#0284c7] text-[#001f2e] flex items-center justify-center font-['Outfit'] font-black text-xl shadow-lg shadow-[#7dd3fc]/20 group-hover:scale-105 transition-transform">
+          <div aria-hidden="true" class="w-10 h-10 rounded-xl bg-gradient-to-br from-ice via-ice-strong to-sky-600 text-ink flex items-center justify-center font-headline font-black text-xl shadow-lg shadow-ice/20 group-hover:scale-105 transition-transform">
             99
           </div>
           <div class="flex flex-col">
-            <span class="font-extrabold text-white tracking-tight text-lg leading-tight flex items-center gap-1.5 font-['Outfit']">
+            <span class="font-extrabold text-white tracking-tight text-lg leading-tight flex items-center gap-1.5 font-headline">
               FIT 99
-              <span class="text-[9px] font-bold uppercase tracking-widest text-[#7dd3fc] bg-[#7dd3fc]/10 px-1.5 py-0.5 rounded border border-[#7dd3fc]/30">CAIRO</span>
+              <span class="text-[9px] font-bold uppercase tracking-widest text-ice bg-ice/10 px-1.5 py-0.5 rounded border border-ice/30">CAIRO</span>
             </span>
-            <span class="text-[9px] text-[#a0b4c4] tracking-tight">Glacier Gate Protocol</span>
+            <span class="text-[9px] text-mist tracking-tight">Glacier Gate Protocol</span>
           </div>
         </a>
-        <nav class="hidden xl:flex items-center gap-1 text-xs font-semibold">
-          <a class="px-3 py-1.5 rounded-full transition-all text-[#a0b4c4] hover:text-white hover:bg-[#1a2438]" href="dashboard.html">Overview</a>
-          <a class="px-3 py-1.5 rounded-full transition-all text-[#a0b4c4] hover:text-white hover:bg-[#1a2438]" href="exercises.html">Workouts</a>
-          <a class="px-3 py-1.5 rounded-full transition-all text-[#a0b4c4] hover:text-white hover:bg-[#1a2438]" href="exercise-detail.html">Active Routine</a>
-          <a class="px-3 py-1.5 rounded-full transition-all text-[#a0b4c4] hover:text-white hover:bg-[#1a2438]" href="routine-builder.html">Workout Builder</a>
-          <a class="px-3 py-1.5 rounded-full transition-all text-[#a0b4c4] hover:text-white hover:bg-[#1a2438]" href="nutrition.html">Nutrition</a>
-          <a class="px-3 py-1.5 rounded-full transition-all text-[#a0b4c4] hover:text-white hover:bg-[#1a2438]" href="food-log.html">Log Food</a>
-          <a class="px-3 py-1.5 rounded-full transition-all text-[#a0b4c4] hover:text-white hover:bg-[#1a2438]" href="profile.html">Profile &amp; Metrics</a>
-          <a class="px-3 py-1.5 rounded-full transition-all text-[#a0b4c4] hover:text-white hover:bg-[#1a2438]" href="index.html">Club Tour</a>
+        <nav aria-label="Primary" class="hidden xl:flex items-center gap-1 text-xs font-semibold">
+          <a class="px-3 py-1.5 rounded-full transition-all text-mist hover:text-white hover:bg-night-hover" href="dashboard.html">Overview</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-mist hover:text-white hover:bg-night-hover" href="exercises.html">Workouts</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-mist hover:text-white hover:bg-night-hover" href="exercise-detail.html">Active Routine</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-mist hover:text-white hover:bg-night-hover" href="routine-builder.html">Workout Builder</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-mist hover:text-white hover:bg-night-hover" href="nutrition.html">Nutrition</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-mist hover:text-white hover:bg-night-hover" href="food-log.html">Log Food</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-mist hover:text-white hover:bg-night-hover" href="profile.html">Profile &amp; Metrics</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-mist hover:text-white hover:bg-night-hover" href="index.html">Club Tour</a>
         </nav>
       </div>
       <div class="flex items-center gap-3">
-        <div class="hidden sm:flex items-center gap-2 bg-[#141c2e] border border-[#2a3a48] px-3 py-1 rounded-full text-xs text-[#7dd3fc]">
-          <span class="w-2 h-2 rounded-full bg-[#7dd3fc] animate-ping"></span>
+        <div class="hidden sm:flex items-center gap-2 bg-night-card border border-night-line px-3 py-1 rounded-full text-xs text-ice">
+          <span aria-hidden="true" class="w-2 h-2 rounded-full bg-ice animate-ping"></span>
           <span class="font-bold">Turnstiles Online</span>
         </div>
-        <a class="px-3.5 py-1.5 rounded-full bg-[#7dd3fc] text-[#001f2e] font-bold text-xs hover:bg-[#38bdf8] transition-colors flex items-center gap-1.5" href="dashboard.html">
-          <span class="material-symbols-outlined text-[16px]">dashboard</span>
+        <a class="px-3.5 py-1.5 rounded-full bg-ice text-ink font-bold text-xs hover:bg-ice-strong transition-colors flex items-center gap-1.5" href="dashboard.html">
+          <span aria-hidden="true" class="material-symbols-outlined text-[16px]">dashboard</span>
           <span>Dashboard</span>
         </a>
       </div>
@@ -66,104 +63,104 @@
   </header>
 
   <!-- Mobile Sub-bar -->
-  <div class="xl:hidden fixed top-16 left-0 right-0 z-40 bg-[#0f1524]/95 border-b border-[#2a3a48] px-4 py-2 overflow-x-auto flex gap-2">
-    <a class="text-xs px-3 py-1 rounded-full text-[#a0b4c4] whitespace-nowrap" href="dashboard.html">Overview</a>
-    <a class="text-xs px-3 py-1 rounded-full text-[#a0b4c4] whitespace-nowrap" href="exercises.html">Workouts</a>
-    <a class="text-xs px-3 py-1 rounded-full text-[#a0b4c4] whitespace-nowrap" href="exercise-detail.html">Routine</a>
-    <a class="text-xs px-3 py-1 rounded-full text-[#a0b4c4] whitespace-nowrap" href="routine-builder.html">Builder</a>
-    <a class="text-xs px-3 py-1 rounded-full text-[#a0b4c4] whitespace-nowrap" href="nutrition.html">Nutrition</a>
-    <a class="text-xs px-3 py-1 rounded-full text-[#a0b4c4] whitespace-nowrap" href="profile.html">Profile</a>
-    <a class="text-xs px-3 py-1 rounded-full bg-[#7dd3fc] text-[#001f2e] font-bold whitespace-nowrap" href="login.html">Cairo Gate</a>
-  </div>
+  <nav aria-label="Primary (mobile)" class="xl:hidden fixed top-16 left-0 right-0 z-40 bg-night-header/95 border-b border-night-line px-4 py-2 overflow-x-auto flex gap-2">
+    <a class="text-xs px-3 py-1 rounded-full text-mist whitespace-nowrap" href="dashboard.html">Overview</a>
+    <a class="text-xs px-3 py-1 rounded-full text-mist whitespace-nowrap" href="exercises.html">Workouts</a>
+    <a class="text-xs px-3 py-1 rounded-full text-mist whitespace-nowrap" href="exercise-detail.html">Routine</a>
+    <a class="text-xs px-3 py-1 rounded-full text-mist whitespace-nowrap" href="routine-builder.html">Builder</a>
+    <a class="text-xs px-3 py-1 rounded-full text-mist whitespace-nowrap" href="nutrition.html">Nutrition</a>
+    <a class="text-xs px-3 py-1 rounded-full text-mist whitespace-nowrap" href="profile.html">Profile</a>
+    <a class="text-xs px-3 py-1 rounded-full bg-ice text-ink font-bold whitespace-nowrap" href="login.html" aria-current="page">Cairo Gate</a>
+  </nav>
 
-  <main class="w-full flex-grow flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+  <main id="main" tabindex="-1" class="w-full flex-grow flex items-center justify-center pt-32 xl:pt-24 pb-16 focus:outline-none px-4 sm:px-6 lg:px-8">
     <div class="max-w-2xl w-full mx-auto flex flex-col items-center">
       
       <!-- Top Section Caption -->
       <div class="mb-6 text-center max-w-xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#141c2e] border border-[#2a3a48] text-xs font-semibold text-[#7dd3fc] mb-3">
-          <span class="material-symbols-outlined text-[15px]">lock</span>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-night-card border border-night-line text-xs font-semibold text-ice mb-3">
+          <span aria-hidden="true" class="material-symbols-outlined text-[15px]">lock</span>
           <span>Fit 99 Glacier Access Gateway • Cairo Nodes</span>
         </div>
-        <h1 class="font-['Outfit'] font-black text-3xl sm:text-4xl text-white tracking-tight">
+        <h1 id="login-title" class="font-headline font-black text-3xl sm:text-4xl text-white tracking-tight">
           Member Sign In &amp; Gate Entry
         </h1>
-        <p class="text-xs sm:text-sm text-[#a0b4c4] mt-1.5">
+        <p class="text-xs sm:text-sm text-mist mt-1.5">
           Authenticate to unlock performance telemetry, schedule reservations, and trigger contactless turnstiles.
         </p>
       </div>
 
       <!-- Authentication Console Card -->
-      <div class="w-full bg-[#141c2e]/90 backdrop-blur-2xl rounded-3xl border border-[#2a3a48] p-6 sm:p-8 shadow-2xl relative overflow-hidden space-y-6">
+      <div class="w-full bg-night-card/90 backdrop-blur-2xl rounded-3xl border border-night-line p-6 sm:p-8 shadow-2xl relative overflow-hidden space-y-6">
         
         <!-- Mode Tabs -->
-        <div class="flex items-center justify-between pb-2 border-b border-[#2a3a48]/60">
-          <div class="flex p-1 bg-[#0a0e1a]/80 rounded-xl border border-[#2a3a48]">
-            <button class="px-5 py-2 rounded-lg font-['Outfit'] font-bold text-xs text-[#001f2e] bg-[#7dd3fc] shadow-sm">
+        <div class="flex items-center justify-between pb-2 border-b border-night-line/60">
+          <nav aria-label="Account" class="flex p-1 bg-night/80 rounded-xl border border-night-line">
+            <span aria-current="page" class="px-5 py-2 rounded-lg font-headline font-bold text-xs text-ink bg-ice shadow-sm">
               Sign In
-            </button>
-            <button class="px-5 py-2 rounded-lg font-['Outfit'] font-semibold text-xs text-[#a0b4c4] hover:text-white">
+            </span>
+            <a href="register.html" class="px-5 py-2 rounded-lg font-headline font-semibold text-xs text-mist hover:text-white">
               Claim Pass
-            </button>
-          </div>
-          <span class="text-xs text-[#7dd3fc] font-semibold flex items-center gap-1">
-            <span class="material-symbols-outlined text-sm">contactless</span>
+            </a>
+          </nav>
+          <span class="text-xs text-ice font-semibold flex items-center gap-1">
+            <span aria-hidden="true" class="material-symbols-outlined text-sm">contactless</span>
             <span>NFC Ready</span>
           </span>
         </div>
 
         <!-- Security Badge -->
-        <div class="flex items-center justify-between bg-[#111828]/80 border border-[#2a3a48] px-4 py-2.5 rounded-xl text-xs">
-          <div class="flex items-center gap-2 text-[#c0d8e8]">
-            <span class="material-symbols-outlined text-[17px] text-[#7dd3fc]">verified_user</span>
+        <div class="flex items-center justify-between bg-night-input/80 border border-night-line px-4 py-2.5 rounded-xl text-xs">
+          <div class="flex items-center gap-2 text-frost-dim">
+            <span aria-hidden="true" class="material-symbols-outlined text-[17px] text-ice">verified_user</span>
             <span>256-bit TLS encrypted gate tokens</span>
           </div>
-          <span class="text-[#7dd3fc] font-bold text-[10px] uppercase">Active</span>
+          <span class="text-ice font-bold text-[10px] uppercase">Active</span>
         </div>
 
         <!-- Form -->
-        <form action="dashboard.html" method="get" class="space-y-4">
+        <form action="dashboard.html" method="get" class="space-y-4" aria-labelledby="login-title">
           
           <!-- Egyptian Mobile Input -->
           <div class="space-y-1.5">
             <div class="flex items-center justify-between">
-              <label class="text-xs font-semibold text-[#a0b4c4] tracking-wide uppercase">
+              <label for="login-phone" class="text-xs font-semibold text-mist tracking-wide uppercase">
                 Egypt Registered Mobile Number
               </label>
-              <span class="text-[11px] text-[#7dd3fc]">Sample Cairo Athlete</span>
+              <span id="login-phone-sample" class="text-[11px] text-ice">Sample Cairo Athlete</span>
             </div>
-            <div class="flex items-center bg-[#0a0e1a]/90 rounded-2xl px-4 py-1 border border-[#2a3a48] focus-within:border-[#7dd3fc] transition-all">
-              <div class="flex items-center gap-1.5 pr-3.5 mr-3.5 border-r border-[#2a3a48] py-2 text-[#e0e8f0] select-none">
-                <span class="text-base">🇪🇬</span>
-                <span class="font-['Outfit'] font-bold text-sm text-white">+20</span>
+            <div class="flex items-center bg-night/90 rounded-2xl px-4 py-1 border border-night-edge focus-within:border-ice focus-within:ring-2 focus-within:ring-ice/30 transition-all">
+              <div class="flex items-center gap-1.5 pr-3.5 mr-3.5 border-r border-night-line py-2 text-frost select-none">
+                <span aria-hidden="true" class="text-base">🇪🇬</span>
+                <span class="font-headline font-bold text-sm text-white"><span class="sr-only">Egypt country code</span>+20</span>
               </div>
-              <input class="w-full bg-transparent text-white text-sm py-2.5 outline-none font-medium border-0 focus:ring-0" placeholder="10X XXX XXXX" type="tel" value="100 482 1937">
-              <span class="material-symbols-outlined text-[20px] text-[#7dd3fc]">check_circle</span>
+              <input id="login-phone" name="phone" required autocomplete="tel-national" inputmode="tel" pattern="1[0125][0-9 ]{8,10}" aria-describedby="login-phone-hint login-phone-sample" class="w-full bg-transparent text-white text-sm py-2.5 outline-none font-medium border-0 focus:ring-0 placeholder:text-mist-dim" placeholder="10X XXX XXXX" type="tel" value="100 482 1937">
+              <span aria-hidden="true" class="material-symbols-outlined text-[20px] text-ice">check_circle</span>
             </div>
-            <p class="text-[11px] text-[#a0b4c4]">Vodafone, Orange, Etisalat, or WE mobile network.</p>
+            <p id="login-phone-hint" class="text-[11px] text-mist">Vodafone, Orange, Etisalat, or WE mobile network.</p>
           </div>
 
           <!-- Passcode Input -->
           <div class="space-y-1.5">
             <div class="flex items-center justify-between">
-              <label class="text-xs font-semibold text-[#a0b4c4] tracking-wide uppercase">
+              <label for="login-passcode" class="text-xs font-semibold text-mist tracking-wide uppercase">
                 6-Digit Athlete Passcode
               </label>
-              <a href="dashboard.html" class="text-xs text-[#7dd3fc] hover:underline">Forgot Code?</a>
+              <a href="register.html" class="text-xs text-ice underline-offset-2 hover:underline">Forgot Code?</a>
             </div>
-            <div class="flex items-center bg-[#0a0e1a]/90 rounded-2xl px-4 py-1 border border-[#2a3a48] focus-within:border-[#7dd3fc] transition-all">
-              <span class="material-symbols-outlined text-[20px] text-[#a0b4c4] mr-3">pin</span>
-              <input class="w-full bg-transparent text-white text-sm py-2.5 outline-none font-mono tracking-widest border-0 focus:ring-0" placeholder="••••••" type="password" value="992482">
-              <span class="material-symbols-outlined text-[20px] text-[#a0b4c4] cursor-pointer">visibility</span>
+            <div class="flex items-center bg-night/90 rounded-2xl px-4 py-1 border border-night-edge focus-within:border-ice focus-within:ring-2 focus-within:ring-ice/30 transition-all">
+              <span aria-hidden="true" class="material-symbols-outlined text-[20px] text-mist mr-3">pin</span>
+              <input id="login-passcode" name="passcode" required autocomplete="current-password" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" class="w-full bg-transparent text-white text-sm py-2.5 outline-none font-mono tracking-widest border-0 focus:ring-0 placeholder:text-mist-dim" placeholder="••••••" type="password">
+              <button type="button" class="text-mist hover:text-white p-1 transition-colors"><span aria-hidden="true" class="material-symbols-outlined text-[20px]">visibility</span><span class="sr-only">Show passcode</span></button>
             </div>
           </div>
 
           <!-- Branch Location Selection -->
           <div class="space-y-1.5">
-            <label class="text-xs font-semibold text-[#a0b4c4] tracking-wide uppercase">
+            <label for="login-branch" class="text-xs font-semibold text-mist tracking-wide uppercase">
               Current Gym Turnstile
             </label>
-            <select class="w-full bg-[#0a0e1a]/90 text-white text-xs py-2.5 px-4 rounded-xl border border-[#2a3a48] focus:border-[#7dd3fc] outline-none">
+            <select id="login-branch" name="branch" class="w-full bg-night/90 text-white text-sm py-2.5 pl-4 pr-10 rounded-xl border border-night-edge focus:border-ice focus:ring-2 focus:ring-ice/30 outline-none">
               <option selected>Zamalek Arena — Main Bay (Turnstile #04)</option>
               <option>New Cairo Performance Lab — Studio Gate A</option>
               <option>Sheikh Zayed Flagship — Olympic Floor</option>
@@ -172,8 +169,8 @@
 
           <!-- Submit CTA -->
           <div class="pt-2">
-            <button type="submit" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#7dd3fc] to-[#38bdf8] hover:from-[#38bdf8] hover:to-[#0284c7] text-[#001f2e] font-['Outfit'] font-black text-sm uppercase tracking-wider shadow-lg shadow-[#7dd3fc]/20 transition-all flex items-center justify-center gap-2">
-              <span class="material-symbols-outlined text-xl">login</span>
+            <button type="submit" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-ice to-ice-strong hover:from-ice-soft hover:to-ice-strong text-ink font-headline font-black text-sm uppercase tracking-wider shadow-lg shadow-ice/20 transition-all flex items-center justify-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-xl">login</span>
               <span>Authenticate &amp; Open Turnstile</span>
             </button>
           </div>
@@ -181,13 +178,13 @@
         </form>
 
         <!-- Quick Demo Credentials Shortcut -->
-        <div class="pt-4 border-t border-[#2a3a48]/70 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#a0b4c4]">
-          <span>Fast athlete login:</span>
-          <div class="flex items-center gap-2">
-            <a href="dashboard.html" class="px-3 py-1.5 rounded-lg bg-[#111828] border border-[#2a3a48] hover:border-[#7dd3fc] text-[#c8eaff] transition font-semibold">
+        <div class="pt-4 border-t border-night-line/70 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-mist">
+          <span id="fast-login">Fast athlete login:</span>
+          <div class="flex items-center gap-2" role="group" aria-labelledby="fast-login">
+            <a href="dashboard.html" class="px-3 py-1.5 rounded-lg bg-night-input border border-night-line hover:border-ice text-ice-soft transition font-semibold">
               Omar Hassan (Athlete)
             </a>
-            <a href="dashboard.html" class="px-3 py-1.5 rounded-lg bg-[#111828] border border-[#2a3a48] hover:border-[#7dd3fc] text-[#c8eaff] transition font-semibold">
+            <a href="dashboard.html" class="px-3 py-1.5 rounded-lg bg-night-input border border-night-line hover:border-ice text-ice-soft transition font-semibold">
               Coach Karim (Staff)
             </a>
           </div>
@@ -199,15 +196,15 @@
   </main>
 
   <!-- Unified Footer (Dark Variant) -->
-  <footer class="w-full bg-[#0a0e1a] border-t border-[#2a3a48]/60 py-6">
+  <footer class="w-full bg-night border-t border-night-line/60 py-6">
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">
-        <div class="w-6 h-6 rounded-lg bg-[#7dd3fc] text-[#001f2e] flex items-center justify-center font-bold text-xs">
+        <div aria-hidden="true" class="w-6 h-6 rounded-lg bg-ice text-ink flex items-center justify-center font-bold text-xs">
           99
         </div>
-        <span class="text-xs text-[#a0b4c4]">© 2025 Fit 99 Cairo Ecosystem. Glacier Companion Framework.</span>
+        <span class="text-xs text-mist">© 2026 Fit 99 Cairo Ecosystem. Glacier Companion Framework.</span>
       </div>
-      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold text-[#a0b4c4]">
+      <nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold text-mist">
         <a class="hover:text-white transition-colors" href="dashboard.html">Overview</a>
         <a class="hover:text-white transition-colors" href="exercises.html">Workouts</a>
         <a class="hover:text-white transition-colors" href="exercise-detail.html">Routine</a>
@@ -216,7 +213,7 @@
         <a class="hover:text-white transition-colors" href="food-log.html">Food Log</a>
         <a class="hover:text-white transition-colors" href="profile.html">Profile</a>
         <a class="hover:text-white transition-colors" href="index.html">Tour</a>
-      </div>
+      </nav>
     </div>
   </footer>
 
