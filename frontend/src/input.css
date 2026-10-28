@@ -68,3 +68,26 @@
     }
   }
 }
+
+/* Shared card surfaces used on teammates' pages (were in inline <style> blocks).
+   Pages can now delete their local copies; class names stay the same. */
+@utility frosted-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(186, 230, 253, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(186, 230, 253, 0.28), 0 1px 2px rgba(14, 165, 233, 0.08);
+}
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(186, 230, 253, 0.7);
+  box-shadow: 0 8px 30px -4px rgba(14, 165, 233, 0.08);
+}
+@utility glass-card-subtle {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 230, 253, 0.5);
+}
