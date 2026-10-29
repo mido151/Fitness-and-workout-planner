@@ -110,3 +110,8 @@
 @utility cursor-bar {
   cursor: var(--cursor-bar);
 }
+
+/* routine-builder: hide the number-input spinners inside the exercise matrix */
+#matrix-body input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+#matrix-body input[type=number]::-webkit-inner-spin-button,
+#matrix-body input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
