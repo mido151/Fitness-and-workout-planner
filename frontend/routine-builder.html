@@ -1,54 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html class="light" lang="en"><head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Fit 99 - Log &amp; Build Workout</title>
-  
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+  <!-- Local built Tailwind CSS (no CDN) -->
   <link rel="stylesheet" href="css/output.css">
 </head>
-<body>
+<body class="bg-gradient-to-br from-[#f0f9ff] via-[#e6f4fe] to-[#dbeafe] font-['Inter'] text-slate-800 antialiased min-h-screen selection:bg-sky-200 selection:text-sky-900 flex flex-col justify-between">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-sky-700 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to main content</a>
 
   <!-- Unified Navigation Header -->
-  <header>
-    <div>
-      <div>
-        <a href="dashboard.html">
-          <div>
-            <span>99</span>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-sky-200/70 shadow-[0_4px_20px_rgba(186,230,253,0.35)]">
+    <div class="h-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-6">
+        <a class="flex items-center gap-2.5 group" href="dashboard.html">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-sky-500 to-sky-400 flex items-center justify-center shadow-md shadow-sky-400/30">
+            <span class="font-black text-white text-lg tracking-tight">99</span>
           </div>
-          <div>
-            <span>FIT <span>99</span></span>
-            <span>Glacier Performance</span>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-slate-900 tracking-tight text-lg leading-tight flex items-center gap-1 font-['Outfit']">FIT <span class="text-sky-700">99</span></span>
+            <span class="text-[9px] font-bold uppercase tracking-widest text-sky-700">Glacier Performance</span>
           </div>
         </a>
-        <nav aria-label="Main Navigation">
-          <a href="dashboard.html">Overview</a>
-          <a href="exercises.html">Workouts</a>
-          <a href="exercise-detail.html">Active Routine</a>
-          <a href="routine-builder.html" aria-current="page">Workout Builder</a>
-          <a href="nutrition.html">Nutrition</a>
-          <a href="food-log.html">Log Food</a>
-          <a href="profile.html">Profile &amp; Metrics</a>
-          <a href="index.html">Club Tour</a>
+        <nav aria-label="Primary" class="hidden xl:flex items-center gap-1 text-xs font-semibold">
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="dashboard.html">Overview</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="exercises.html">Workouts</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="exercise-detail.html">Active Routine</a>
+          <a aria-current="page" class="px-3 py-1.5 rounded-full transition-all bg-sky-700 text-white shadow-sm" href="routine-builder.html">Workout Builder</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="nutrition.html">Nutrition</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="food-log.html">Log Food</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="profile.html">Profile &amp; Metrics</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="index.html">Club Tour</a>
         </nav>
       </div>
-      <div>
-        <a href="login.html">
-          <span class="material-symbols-outlined">contactless</span>
-          <span>Cairo Gate</span>
+      <div class="flex items-center gap-3">
+        <a class="px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-semibold text-xs hover:bg-sky-100 transition-colors flex items-center gap-1.5" href="login.html">
+          <span aria-hidden="true" class="material-symbols-outlined text-[16px]">contactless</span>
+          <span class="hidden sm:inline">Cairo Gate</span>
         </a>
-        <div></div>
-        <a href="profile.html">
-          <div>OH</div>
-          <div>
-            <span>Omar Hassan</span>
-            <span>Pro Athlete</span>
+        <div class="h-6 w-px bg-sky-200 hidden sm:block"></div>
+        <a class="flex items-center gap-2 pl-1 group" href="profile.html">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-sky-400 to-sky-600 flex items-center justify-center text-white text-xs font-bold shadow-sm">OH</div>
+          <div class="hidden md:flex flex-col text-left">
+            <span class="text-xs text-slate-900 font-bold leading-tight group-hover:text-sky-600 transition-colors">Omar Hassan</span>
+            <span class="text-[10px] text-sky-700 font-bold uppercase tracking-wider">Pro Athlete</span>
           </div>
         </a>
       </div>
@@ -56,350 +56,498 @@
   </header>
 
   <!-- Mobile Sub-bar -->
-  <div>
-    <nav aria-label="Mobile Navigation">
-      <a href="dashboard.html">Overview</a>
-      <a href="exercises.html">Workouts</a>
-      <a href="exercise-detail.html">Routine</a>
-      <a href="routine-builder.html" aria-current="page">Builder</a>
-      <a href="nutrition.html">Nutrition</a>
-      <a href="food-log.html">Food Log</a>
-      <a href="profile.html">Profile</a>
-    </nav>
-  </div>
+  <nav aria-label="Mobile quick navigation" class="xl:hidden fixed top-16 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-sky-200/50 px-4 py-2 overflow-x-auto flex gap-2">
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="dashboard.html">Overview</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="exercises.html">Workouts</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="exercise-detail.html">Routine</a>
+    <a class="text-xs px-3 py-1 rounded-full bg-sky-700 text-white font-semibold whitespace-nowrap" href="routine-builder.html">Builder</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="nutrition.html">Nutrition</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="food-log.html">Food Log</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="profile.html">Profile</a>
+  </nav>
 
-  <main>
-    <div>
+  <main id="main-content" tabindex="-1" class="focus:outline-none w-full pt-28 xl:pt-24 pb-16">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
       <!-- Breadcrumbs, title, actions -->
-      <div>
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
         <div>
-          <nav aria-label="Breadcrumb">
-            <a href="exercises.html">Workouts</a>
-            <span class="material-symbols-outlined">chevron_right</span>
+          <nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
+            <a class="hover:text-sky-600 transition-colors" href="exercises.html">Workouts</a>
+            <span aria-hidden="true" class="material-symbols-outlined text-[14px]">chevron_right</span>
             <span>Custom Builder</span>
-            <span class="material-symbols-outlined">chevron_right</span>
-            <span>Log &amp; Build Workout</span>
+            <span aria-hidden="true" class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <span class="text-slate-800 font-semibold">Log &amp; Build Workout</span>
           </nav>
-          <div>
-            <h1>Log &amp; Build Workout</h1>
-            <span>Active Editor</span>
+          <div class="flex flex-wrap items-center gap-3">
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-['Outfit']">Log &amp; Build Workout</h1>
+            <span class="bg-sky-100 text-sky-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-sky-200">Active Editor</span>
           </div>
-          <p>Design the session, tune loads and rest, then log each set live.</p>
+          <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Design the session, tune loads and rest, then log each set live.</p>
         </div>
-        <div>
-          <button type="button" id="save-template">
-            <span class="material-symbols-outlined">bookmark_add</span>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button type="button" id="save-template" class="px-4 py-2.5 rounded-xl bg-white border border-sky-200 text-xs font-semibold text-slate-700 hover:bg-sky-50 transition shadow-sm flex items-center justify-center gap-1.5">
+            <span aria-hidden="true" class="material-symbols-outlined text-base text-sky-700">bookmark_add</span>
             <span>Save as Routine Template</span>
           </button>
-          <button type="button" id="start-logging">
-            <span class="material-symbols-outlined">play_arrow</span>
+          <button type="button" id="start-logging" class="px-5 py-2.5 rounded-xl bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-sm">
+            <span aria-hidden="true" class="material-symbols-outlined text-base">play_arrow</span>
             <span>Start Live Logging</span>
           </button>
         </div>
       </div>
 
       <!-- 01 Metadata -->
-      <section>
-        <div>
-          <div>
-            <div>01</div>
+      <section class="bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl p-5 sm:p-6 shadow-sm space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-sky-100">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-sky-700 text-white flex items-center justify-center font-bold text-xs">01</div>
             <div>
-              <h2>Routine Metadata &amp; Configuration</h2>
-              <p>Define the core target parameters for this session profile</p>
+              <h2 class="text-sm font-bold uppercase tracking-wider text-sky-700 font-['Outfit']">Routine Metadata &amp; Configuration</h2>
+              <p class="text-xs text-slate-500">Define the core target parameters for this session profile</p>
             </div>
           </div>
-          <span>Glacier Protocol</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Glacier Protocol</span>
         </div>
 
-        <div>
-          <div>
-            <label for="routine-title">Routine Title</label>
-            <div>
-              <input id="routine-title" type="text" value="Hypertrophic Chest &amp; Deltoids Protocol">
-              <span class="material-symbols-outlined">edit_note</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-12 gap-4">
+          <div class="xl:col-span-4">
+            <label for="routine-title" class="block text-xs font-semibold text-slate-600 mb-1">Routine Title</label>
+            <div class="relative">
+              <input id="routine-title" type="text" value="Hypertrophic Chest &amp; Deltoids Protocol" class="w-full text-xs font-semibold pl-3.5 pr-9 py-2.5 rounded-xl bg-sky-50/50 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-900">
+              <span aria-hidden="true" class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-sky-500 text-lg pointer-events-none">edit_note</span>
             </div>
           </div>
-          <div>
-            <label for="category">Target Category</label>
-            <div>
-              <select id="category">
-                <option selected>Hypertrophy</option>
+          <div class="xl:col-span-2">
+            <label for="category" class="block text-xs font-semibold text-slate-600 mb-1">Target Category</label>
+            <div class="relative">
+              <select id="category" class="w-full text-xs font-medium pl-3.5 pr-9 py-2.5 rounded-xl bg-sky-50/50 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-900 appearance-none">
+                <option selected="">Hypertrophy</option>
                 <option>Strength &amp; Power</option>
                 <option>Metabolic Conditioning</option>
                 <option>Deload &amp; Recovery</option>
               </select>
-              <span class="material-symbols-outlined">expand_more</span>
+              <span aria-hidden="true" class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg pointer-events-none">expand_more</span>
             </div>
           </div>
-          <div>
-            <label for="coach">Assigned Coach</label>
-            <div>
-              <select id="coach">
-                <option selected>Coach Karim Adel (Lead Strength)</option>
+          <div class="xl:col-span-3">
+            <label for="coach" class="block text-xs font-semibold text-slate-600 mb-1">Assigned Coach</label>
+            <div class="relative">
+              <select id="coach" class="w-full text-xs font-medium pl-3.5 pr-9 py-2.5 rounded-xl bg-sky-50/50 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-900 appearance-none">
+                <option selected="">Coach Karim Adel (Lead Strength)</option>
                 <option>Coach Elena Rostova (Biomechanics)</option>
                 <option>Coach Marcus Vance (Velocity &amp; Power)</option>
                 <option>Self-Directed Protocol</option>
               </select>
-              <span class="material-symbols-outlined">expand_more</span>
+              <span aria-hidden="true" class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg pointer-events-none">expand_more</span>
             </div>
           </div>
-          <div>
-            <span>Default Rest Interval</span>
-            <div id="rest-presets" role="group" aria-label="Default rest interval">
-              <button type="button" data-rest="60" class="rest-btn">60s</button>
-              <button type="button" data-rest="90" class="rest-btn">90s</button>
-              <button type="button" data-rest="120" class="rest-btn">120s</button>
+          <div class="sm:col-span-2 xl:col-span-3">
+            <span class="block text-xs font-semibold text-slate-600 mb-1">Default Rest Interval</span>
+            <div id="rest-presets" class="grid grid-cols-3 gap-2" role="group" aria-label="Default rest interval">
+              <button type="button" data-rest="60" class="rest-btn py-2.5 rounded-xl text-xs font-bold transition bg-white border border-sky-200 text-slate-700 hover:border-sky-400" aria-pressed="false">60s</button>
+              <button type="button" data-rest="90" class="rest-btn py-2.5 rounded-xl text-xs font-bold transition bg-sky-700 text-white shadow-sm" aria-pressed="true">90s</button>
+              <button type="button" data-rest="120" class="rest-btn py-2.5 rounded-xl text-xs font-bold transition bg-white border border-sky-200 text-slate-700 hover:border-sky-400" aria-pressed="false">120s</button>
             </div>
           </div>
         </div>
 
-        <div>
-          <div>
-            <span>Target Muscle Groups:</span>
-            <span id="muscle-chips"></span>
-            <button type="button" id="add-muscle-btn">+ Add Muscle</button>
-            <input id="muscle-input" type="text" placeholder="Muscle name, press Enter">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pt-4 border-t border-sky-100">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mr-1">Target Muscle Groups:</span>
+            <span id="muscle-chips" class="contents">
+        <span class="inline-flex items-center gap-1.5 pl-3 pr-1.5 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-semibold border border-sky-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Pectoralis Major
+          <button type="button" data-rm="0" class="w-4 h-4 rounded-full hover:bg-sky-200 flex items-center justify-center" aria-label="Remove Pectoralis Major"><span aria-hidden="true" class="material-symbols-outlined text-[12px]">close</span></button>
+        </span>
+        <span class="inline-flex items-center gap-1.5 pl-3 pr-1.5 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-semibold border border-sky-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Anterior Deltoids
+          <button type="button" data-rm="1" class="w-4 h-4 rounded-full hover:bg-sky-200 flex items-center justify-center" aria-label="Remove Anterior Deltoids"><span aria-hidden="true" class="material-symbols-outlined text-[12px]">close</span></button>
+        </span>
+        <span class="inline-flex items-center gap-1.5 pl-3 pr-1.5 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-semibold border border-sky-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Triceps Brachii
+          <button type="button" data-rm="2" class="w-4 h-4 rounded-full hover:bg-sky-200 flex items-center justify-center" aria-label="Remove Triceps Brachii"><span aria-hidden="true" class="material-symbols-outlined text-[12px]">close</span></button>
+        </span></span>
+            <button type="button" id="add-muscle-btn" class="text-xs font-semibold text-sky-700 hover:text-sky-900 px-3 py-1 rounded-full border border-dashed border-sky-300 hover:border-sky-400 bg-white">+ Add Muscle</button>
+            <input id="muscle-input" aria-label="Muscle name" type="text" placeholder="Muscle name, press Enter" class="hidden text-xs px-3 py-1.5 rounded-full bg-white border border-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-500 w-44">
           </div>
-          <span>
-            <span class="material-symbols-outlined">verified</span>
-            AI Biomechanical Validation: <strong id="validation">Balanced Load</strong>
+          <span class="flex items-center gap-1 text-xs text-slate-500">
+            <span aria-hidden="true" class="material-symbols-outlined text-base text-emerald-600">verified</span>
+            AI Biomechanical Validation: <strong id="validation" class="text-slate-700">Balanced Load</strong>
           </span>
         </div>
       </section>
 
       <!-- Workspace -->
-<div>
+      <div class="grid grid-cols-1 xl:grid-cols-12 gap-6 lg:gap-8 items-start">
 
-  <!-- LEFT: matrix + logger -->
-  <div>
+        <!-- LEFT: matrix + logger -->
+        <div class="contents">
 
-    <!-- 02 Matrix -->
-    <section>
-      <div>
-        <div>
-          <div>02</div>
-          <div>
-            <h2>Exercise Sequence Matrix</h2>
-            <p>Reorder, tune working loads and assign target intensity</p>
-          </div>
-        </div>
-        <div>
-          <button type="button" id="auto-order">
-            <span class="material-symbols-outlined">swap_vert</span>Auto-Order by Fatigue
-          </button>
-          <button type="button" id="jump-add">
-            <span class="material-symbols-outlined">add</span>Add Movement
-          </button>
-        </div>
-      </div>
-
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Movement Name</th>
-              <th scope="col">Sets</th>
-              <th scope="col">Reps</th>
-              <th scope="col">Load (kg)</th>
-              <th scope="col">RPE</th>
-              <th scope="col">Rest (s)</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody id="matrix-body"></tbody>
-        </table>
-      </div>
-
-      <div>
-        <div>
-          <label for="bank" class="sr-only">Movement bank</label>
-          <select id="bank"></select>
-          <button type="button" id="add-from-bank">
-            <span class="material-symbols-outlined">playlist_add</span>Insert from Exercise Bank
-          </button>
-        </div>
-        <div id="matrix-summary"></div>
-      </div>
-    </section>
-
-    <!-- 03 Set logger -->
-    <section id="logger">
-      <div>
-        <div>
-          <div>03</div>
-          <div>
-            <h2>Active Set Execution Logger</h2>
-            <p>Live set capture for: <strong id="log-title"></strong></p>
-          </div>
-        </div>
-        <span id="last-saved">
-          <span></span>No sets logged yet
-        </span>
-      </div>
-
-           <div>
-        <div>
-          <span>Working Load (kg)</span>
-          <div>
-            <button type="button" data-step="weight-input:-2.5" class="stepper" aria-label="Decrease load">−</button>
-            <div>
-              <input id="weight-input" type="number" step="0.5" min="0" value="102.5">
-              <span>Kilograms</span>
+          <!-- 02 Matrix -->
+          <section class="xl:col-span-12 min-w-0 bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl shadow-sm overflow-hidden">
+            <div class="p-5 sm:p-6 border-b border-sky-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-sky-700 text-white flex items-center justify-center font-bold text-xs">02</div>
+                <div>
+                  <h2 class="text-sm font-bold uppercase tracking-wider text-sky-700 font-['Outfit']">Exercise Sequence Matrix</h2>
+                  <p class="text-xs text-slate-500">Reorder, tune working loads and assign target intensity</p>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <button type="button" id="auto-order" class="px-3 py-2 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 text-xs font-semibold border border-sky-200 transition flex items-center gap-1">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">swap_vert</span>Auto-Order by Fatigue
+                </button>
+                <button type="button" id="jump-add" class="px-3.5 py-2 rounded-xl bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold transition shadow-sm flex items-center gap-1.5">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">add</span>Add Movement
+                </button>
+              </div>
             </div>
-            <button type="button" data-step="weight-input:2.5" class="stepper" aria-label="Increase load">+</button>
-          </div>
-          <div>
-            <button type="button" data-step="weight-input:-1.25" class="stepper">−1.25</button>
-            <button type="button" data-step="weight-input:1.25" class="stepper">+1.25</button>
-            <button type="button" data-step="weight-input:5" class="stepper">+5.0</button>
-          </div>
-        </div>
 
-        <div>
-          <span>Reps Completed</span>
-          <div>
-            <button type="button" data-step="reps-input:-1" class="stepper" aria-label="Decrease reps">−</button>
-            <div>
-              <input id="reps-input" type="number" min="0" value="7">
-              <span>Full Repetitions</span>
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[640px] text-left text-xs border-collapse">
+                <thead>
+                  <tr class="bg-sky-50/60 border-b border-sky-100 text-[10px] uppercase tracking-wider text-slate-500 font-bold">
+                    <th class="py-3 pl-4 pr-1 w-12 text-center">#</th>
+                    <th class="py-3 px-3 min-w-[170px]">Movement Name</th>
+                    <th class="py-3 px-2 text-center">Sets</th>
+                    <th class="py-3 px-1 text-center">Reps</th>
+                    <th class="py-3 px-2 text-center">Load (kg)</th>
+                    <th class="py-3 px-2 text-center">RPE</th>
+                    <th class="py-3 px-2 text-center">Rest (s)</th>
+                    <th class="py-3 pr-4 pl-1 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="matrix-body" class="divide-y divide-sky-100/70 text-slate-800">
+        <tr class="hover:bg-sky-50/40 transition-colors ">
+          <td class="py-3.5 pl-4 pr-1 text-center">
+            <div class="flex items-center justify-center gap-0.5 text-slate-400">
+              <span class="flex flex-col">
+                <button type="button" data-up="0" class="leading-none hover:text-sky-600 disabled:opacity-30" disabled="" aria-label="Move up"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_up</span></button>
+                <button type="button" data-down="0" class="leading-none hover:text-sky-600 disabled:opacity-30" aria-label="Move down"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_down</span></button>
+              </span>
+              <span class="font-bold text-xs text-sky-700 w-4">1</span>
             </div>
-            <button type="button" data-step="reps-input:1" class="stepper" aria-label="Increase reps">+</button>
+          </td>
+          <td class="py-3.5 px-3">
+            <div class="font-semibold text-slate-900">Paused Barbell Bench Press</div>
+            <div class="text-[11px] text-slate-500 flex flex-wrap items-center gap-x-1.5 mt-0.5"><span class="text-sky-700 font-semibold">Pectorals / Triceps</span><span>•</span><span>2-sec pause at chest</span></div>
+          </td>
+          <td class="py-3.5 px-2 text-center"><input data-f="sets" data-i="0" type="number" min="1" value="4" class="w-12 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Sets for Paused Barbell Bench Press"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="reps" data-i="0" type="text" value="6 - 8" class="w-16 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-medium text-xs" aria-label="Target reps for Paused Barbell Bench Press"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="load" data-i="0" type="number" min="0" step="0.5" value="102.5" class="w-20 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Load for Paused Barbell Bench Press"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rpe" data-i="0" data-commit="" type="number" min="5" max="10" step="0.5" value="8.5" class="w-14 h-8 px-1 text-center text-xs font-bold rounded-md border focus:outline-none focus:ring-2 focus:ring-sky-500 bg-amber-100 text-amber-800 border-amber-200" aria-label="RPE for Paused Barbell Bench Press"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rest" data-i="0" type="number" min="0" step="15" value="120" class="w-14 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-semibold text-xs" aria-label="Rest seconds for Paused Barbell Bench Press"></td>
+          <td class="py-3.5 pr-4 pl-1 text-right">
+            <div class="flex items-center justify-end gap-0.5">
+              <button type="button" data-dup="0" class="p-1.5 rounded-lg text-slate-400 hover:text-sky-600 hover:bg-sky-100/60 transition" title="Duplicate row" aria-label="Duplicate Paused Barbell Bench Press"><span aria-hidden="true" class="material-symbols-outlined text-lg">content_copy</span></button>
+              <button type="button" data-del="0" class="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition" title="Remove row" aria-label="Remove Paused Barbell Bench Press"><span aria-hidden="true" class="material-symbols-outlined text-lg">delete</span></button>
+            </div>
+          </td>
+        </tr>
+        <tr class="hover:bg-sky-50/40 transition-colors bg-sky-50/20">
+          <td class="py-3.5 pl-4 pr-1 text-center">
+            <div class="flex items-center justify-center gap-0.5 text-slate-400">
+              <span class="flex flex-col">
+                <button type="button" data-up="1" class="leading-none hover:text-sky-600 disabled:opacity-30" aria-label="Move up"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_up</span></button>
+                <button type="button" data-down="1" class="leading-none hover:text-sky-600 disabled:opacity-30" aria-label="Move down"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_down</span></button>
+              </span>
+              <span class="font-bold text-xs text-sky-700 w-4">2</span>
+            </div>
+          </td>
+          <td class="py-3.5 px-3">
+            <div class="font-semibold text-slate-900">Incline Dumbbell Press (30°)</div>
+            <div class="text-[11px] text-slate-500 flex flex-wrap items-center gap-x-1.5 mt-0.5"><span class="text-sky-700 font-semibold">Clavicular Head</span><span>•</span><span>Full stretch ROM</span></div>
+          </td>
+          <td class="py-3.5 px-2 text-center"><input data-f="sets" data-i="1" type="number" min="1" value="3" class="w-12 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Sets for Incline Dumbbell Press (30°)"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="reps" data-i="1" type="text" value="8 - 10" class="w-16 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-medium text-xs" aria-label="Target reps for Incline Dumbbell Press (30°)"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="load" data-i="1" type="number" min="0" step="0.5" value="38" class="w-20 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Load for Incline Dumbbell Press (30°)"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rpe" data-i="1" data-commit="" type="number" min="5" max="10" step="0.5" value="8" class="w-14 h-8 px-1 text-center text-xs font-bold rounded-md border focus:outline-none focus:ring-2 focus:ring-sky-500 bg-amber-100 text-amber-800 border-amber-200" aria-label="RPE for Incline Dumbbell Press (30°)"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rest" data-i="1" type="number" min="0" step="15" value="90" class="w-14 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-semibold text-xs" aria-label="Rest seconds for Incline Dumbbell Press (30°)"></td>
+          <td class="py-3.5 pr-4 pl-1 text-right">
+            <div class="flex items-center justify-end gap-0.5">
+              <button type="button" data-dup="1" class="p-1.5 rounded-lg text-slate-400 hover:text-sky-600 hover:bg-sky-100/60 transition" title="Duplicate row" aria-label="Duplicate Incline Dumbbell Press (30°)"><span aria-hidden="true" class="material-symbols-outlined text-lg">content_copy</span></button>
+              <button type="button" data-del="1" class="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition" title="Remove row" aria-label="Remove Incline Dumbbell Press (30°)"><span aria-hidden="true" class="material-symbols-outlined text-lg">delete</span></button>
+            </div>
+          </td>
+        </tr>
+        <tr class="hover:bg-sky-50/40 transition-colors ">
+          <td class="py-3.5 pl-4 pr-1 text-center">
+            <div class="flex items-center justify-center gap-0.5 text-slate-400">
+              <span class="flex flex-col">
+                <button type="button" data-up="2" class="leading-none hover:text-sky-600 disabled:opacity-30" aria-label="Move up"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_up</span></button>
+                <button type="button" data-down="2" class="leading-none hover:text-sky-600 disabled:opacity-30" aria-label="Move down"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_down</span></button>
+              </span>
+              <span class="font-bold text-xs text-sky-700 w-4">3</span>
+            </div>
+          </td>
+          <td class="py-3.5 px-3">
+            <div class="font-semibold text-slate-900">Weighted Dips</div>
+            <div class="text-[11px] text-slate-500 flex flex-wrap items-center gap-x-1.5 mt-0.5"><span class="text-sky-700 font-semibold">Lower Pectorals / Triceps</span><span>•</span><span>Slight forward torso lean</span></div>
+          </td>
+          <td class="py-3.5 px-2 text-center"><input data-f="sets" data-i="2" type="number" min="1" value="3" class="w-12 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Sets for Weighted Dips"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="reps" data-i="2" type="text" value="8 - 12" class="w-16 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-medium text-xs" aria-label="Target reps for Weighted Dips"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="load" data-i="2" type="number" min="0" step="0.5" value="20" class="w-20 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Load for Weighted Dips"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rpe" data-i="2" data-commit="" type="number" min="5" max="10" step="0.5" value="9" class="w-14 h-8 px-1 text-center text-xs font-bold rounded-md border focus:outline-none focus:ring-2 focus:ring-sky-500 bg-rose-100 text-rose-800 border-rose-200" aria-label="RPE for Weighted Dips"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rest" data-i="2" type="number" min="0" step="15" value="90" class="w-14 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-semibold text-xs" aria-label="Rest seconds for Weighted Dips"></td>
+          <td class="py-3.5 pr-4 pl-1 text-right">
+            <div class="flex items-center justify-end gap-0.5">
+              <button type="button" data-dup="2" class="p-1.5 rounded-lg text-slate-400 hover:text-sky-600 hover:bg-sky-100/60 transition" title="Duplicate row" aria-label="Duplicate Weighted Dips"><span aria-hidden="true" class="material-symbols-outlined text-lg">content_copy</span></button>
+              <button type="button" data-del="2" class="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition" title="Remove row" aria-label="Remove Weighted Dips"><span aria-hidden="true" class="material-symbols-outlined text-lg">delete</span></button>
+            </div>
+          </td>
+        </tr>
+        <tr class="hover:bg-sky-50/40 transition-colors bg-sky-50/20">
+          <td class="py-3.5 pl-4 pr-1 text-center">
+            <div class="flex items-center justify-center gap-0.5 text-slate-400">
+              <span class="flex flex-col">
+                <button type="button" data-up="3" class="leading-none hover:text-sky-600 disabled:opacity-30" aria-label="Move up"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_up</span></button>
+                <button type="button" data-down="3" class="leading-none hover:text-sky-600 disabled:opacity-30" aria-label="Move down"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_down</span></button>
+              </span>
+              <span class="font-bold text-xs text-sky-700 w-4">4</span>
+            </div>
+          </td>
+          <td class="py-3.5 px-3">
+            <div class="font-semibold text-slate-900">Cable Lateral Raise</div>
+            <div class="text-[11px] text-slate-500 flex flex-wrap items-center gap-x-1.5 mt-0.5"><span class="text-sky-700 font-semibold">Lateral Deltoids</span><span>•</span><span>Behind back cuff setup</span></div>
+          </td>
+          <td class="py-3.5 px-2 text-center"><input data-f="sets" data-i="3" type="number" min="1" value="4" class="w-12 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Sets for Cable Lateral Raise"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="reps" data-i="3" type="text" value="12 - 15" class="w-16 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-medium text-xs" aria-label="Target reps for Cable Lateral Raise"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="load" data-i="3" type="number" min="0" step="0.5" value="12.5" class="w-20 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Load for Cable Lateral Raise"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rpe" data-i="3" data-commit="" type="number" min="5" max="10" step="0.5" value="8.5" class="w-14 h-8 px-1 text-center text-xs font-bold rounded-md border focus:outline-none focus:ring-2 focus:ring-sky-500 bg-amber-100 text-amber-800 border-amber-200" aria-label="RPE for Cable Lateral Raise"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rest" data-i="3" type="number" min="0" step="15" value="60" class="w-14 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-semibold text-xs" aria-label="Rest seconds for Cable Lateral Raise"></td>
+          <td class="py-3.5 pr-4 pl-1 text-right">
+            <div class="flex items-center justify-end gap-0.5">
+              <button type="button" data-dup="3" class="p-1.5 rounded-lg text-slate-400 hover:text-sky-600 hover:bg-sky-100/60 transition" title="Duplicate row" aria-label="Duplicate Cable Lateral Raise"><span aria-hidden="true" class="material-symbols-outlined text-lg">content_copy</span></button>
+              <button type="button" data-del="3" class="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition" title="Remove row" aria-label="Remove Cable Lateral Raise"><span aria-hidden="true" class="material-symbols-outlined text-lg">delete</span></button>
+            </div>
+          </td>
+        </tr>
+        <tr class="hover:bg-sky-50/40 transition-colors ">
+          <td class="py-3.5 pl-4 pr-1 text-center">
+            <div class="flex items-center justify-center gap-0.5 text-slate-400">
+              <span class="flex flex-col">
+                <button type="button" data-up="4" class="leading-none hover:text-sky-600 disabled:opacity-30" aria-label="Move up"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_up</span></button>
+                <button type="button" data-down="4" class="leading-none hover:text-sky-600 disabled:opacity-30" disabled="" aria-label="Move down"><span aria-hidden="true" class="material-symbols-outlined text-base">keyboard_arrow_down</span></button>
+              </span>
+              <span class="font-bold text-xs text-sky-700 w-4">5</span>
+            </div>
+          </td>
+          <td class="py-3.5 px-3">
+            <div class="font-semibold text-slate-900">Rope Face Pulls</div>
+            <div class="text-[11px] text-slate-500 flex flex-wrap items-center gap-x-1.5 mt-0.5"><span class="text-sky-700 font-semibold">Rear Deltoids / Rotators</span><span>•</span><span>External rotation at peak</span></div>
+          </td>
+          <td class="py-3.5 px-2 text-center"><input data-f="sets" data-i="4" type="number" min="1" value="3" class="w-12 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Sets for Rope Face Pulls"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="reps" data-i="4" type="text" value="15 - 20" class="w-16 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-medium text-xs" aria-label="Target reps for Rope Face Pulls"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="load" data-i="4" type="number" min="0" step="0.5" value="35" class="w-20 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none" aria-label="Load for Rope Face Pulls"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rpe" data-i="4" data-commit="" type="number" min="5" max="10" step="0.5" value="7.5" class="w-14 h-8 px-1 text-center text-xs font-bold rounded-md border focus:outline-none focus:ring-2 focus:ring-sky-500 bg-emerald-100 text-emerald-800 border-emerald-200" aria-label="RPE for Rope Face Pulls"></td>
+          <td class="py-3.5 px-2 text-center"><input data-f="rest" data-i="4" type="number" min="0" step="15" value="60" class="w-14 h-9 px-1 text-center font-bold text-slate-900 bg-sky-50/60 border border-sky-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none font-semibold text-xs" aria-label="Rest seconds for Rope Face Pulls"></td>
+          <td class="py-3.5 pr-4 pl-1 text-right">
+            <div class="flex items-center justify-end gap-0.5">
+              <button type="button" data-dup="4" class="p-1.5 rounded-lg text-slate-400 hover:text-sky-600 hover:bg-sky-100/60 transition" title="Duplicate row" aria-label="Duplicate Rope Face Pulls"><span aria-hidden="true" class="material-symbols-outlined text-lg">content_copy</span></button>
+              <button type="button" data-del="4" class="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition" title="Remove row" aria-label="Remove Rope Face Pulls"><span aria-hidden="true" class="material-symbols-outlined text-lg">delete</span></button>
+            </div>
+          </td>
+        </tr></tbody>
+              </table>
+            </div>
+
+            <div class="p-4 bg-sky-50/50 border-t border-sky-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="flex flex-wrap items-center gap-2">
+                <label for="bank" class="sr-only">Movement bank</label>
+                <select id="bank" class="text-xs font-medium px-3 py-2 rounded-xl bg-white border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-800 max-w-full"><option value="0">Paused Barbell Bench Press</option><option value="1">Incline Dumbbell Press (30°)</option><option value="2">Weighted Dips</option><option value="3">Cable Lateral Raise</option><option value="4">Rope Face Pulls</option><option value="5">Weighted Pull-Up</option><option value="6">Seated Cable Row</option><option value="7">Barbell Curl</option><option value="8">Back Squat</option></select>
+                <button type="button" id="add-from-bank" class="px-3.5 py-2 rounded-xl bg-sky-100 text-sky-700 hover:bg-sky-200 text-xs font-bold transition flex items-center gap-1">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">playlist_add</span>Insert from Exercise Bank
+                </button>
+              </div>
+              <div id="matrix-summary" class="text-xs text-slate-500 font-medium">5 movements • 17 total working sets planned</div>
+            </div>
+          </section>
+
+          <!-- 03 Set logger -->
+          <section id="logger" class="xl:col-span-8 min-w-0 bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl p-5 sm:p-6 shadow-sm space-y-6 scroll-mt-28">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 border-b border-sky-100">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-sky-700 text-white flex items-center justify-center font-bold text-xs">03</div>
+                <div>
+                  <h2 class="text-sm font-bold uppercase tracking-wider text-sky-700 font-['Outfit']">Active Set Execution Logger</h2>
+                  <p class="text-xs text-slate-500">Live set capture for: <strong id="log-title" class="text-slate-800">Paused Barbell Bench Press (Set 1 of 4)</strong></p>
+                </div>
+              </div>
+              <span id="last-saved" class="self-start md:self-auto text-[11px] font-bold text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1 rounded-full flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-slate-300"></span>No sets logged yet
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              <div class="bg-sky-50/60 rounded-xl p-4 sm:p-5 border border-sky-200/80 flex flex-col items-center">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-2">Working Load (kg)</span>
+                <div class="flex items-center gap-3 sm:gap-4 w-full justify-center">
+                  <button type="button" data-step="weight-input:-2.5" class="stepper w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-xl bg-white border border-sky-200 hover:bg-sky-100 text-slate-700 flex items-center justify-center active:scale-95 transition shadow-sm font-extrabold text-xl" aria-label="Decrease load">−</button>
+                  <div class="w-28 sm:w-36 text-center">
+                    <input id="weight-input" aria-label="Load in kilograms" type="number" step="0.5" min="0" value="102.5" class="w-full text-center font-['Outfit'] text-2xl sm:text-3xl font-extrabold text-slate-900 bg-transparent border-0 focus:outline-none focus:ring-0 p-0">
+                    <span class="text-[11px] font-semibold text-slate-400 block">Kilograms</span>
+                  </div>
+                  <button type="button" data-step="weight-input:2.5" class="stepper w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-xl bg-white border border-sky-200 hover:bg-sky-100 text-slate-700 flex items-center justify-center active:scale-95 transition shadow-sm font-extrabold text-xl" aria-label="Increase load">+</button>
+                </div>
+                <div class="flex items-center gap-2 mt-4">
+                  <button type="button" data-step="weight-input:-1.25" class="stepper text-[11px] font-bold px-2 py-1 rounded-lg bg-white border border-sky-200 text-slate-600 hover:bg-sky-100">−1.25</button>
+                  <button type="button" data-step="weight-input:1.25" class="stepper text-[11px] font-bold px-2 py-1 rounded-lg bg-white border border-sky-200 text-slate-600 hover:bg-sky-100">+1.25</button>
+                  <button type="button" data-step="weight-input:5" class="stepper text-[11px] font-bold px-2 py-1 rounded-lg bg-white border border-sky-200 text-slate-600 hover:bg-sky-100">+5.0</button>
+                </div>
+              </div>
+
+              <div class="bg-sky-50/60 rounded-xl p-4 sm:p-5 border border-sky-200/80 flex flex-col items-center">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-2">Reps Completed</span>
+                <div class="flex items-center gap-3 sm:gap-4 w-full justify-center">
+                  <button type="button" data-step="reps-input:-1" class="stepper w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-xl bg-white border border-sky-200 hover:bg-sky-100 text-slate-700 flex items-center justify-center active:scale-95 transition shadow-sm font-extrabold text-xl" aria-label="Decrease reps">−</button>
+                  <div class="w-28 sm:w-36 text-center">
+                    <input id="reps-input" aria-label="Repetitions completed" type="number" min="0" value="7" class="w-full text-center font-['Outfit'] text-2xl sm:text-3xl font-extrabold text-slate-900 bg-transparent border-0 focus:outline-none focus:ring-0 p-0">
+                    <span class="text-[11px] font-semibold text-slate-400 block">Full Repetitions</span>
+                  </div>
+                  <button type="button" data-step="reps-input:1" class="stepper w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-xl bg-white border border-sky-200 hover:bg-sky-100 text-slate-700 flex items-center justify-center active:scale-95 transition shadow-sm font-extrabold text-xl" aria-label="Increase reps">+</button>
+                </div>
+                <div id="target-window" class="mt-4 text-xs font-semibold text-sky-700">Target Window: 6 - 8 reps</div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex flex-wrap items-center justify-between gap-1 text-xs font-bold uppercase tracking-wider text-slate-600">
+                <span>Perceived Exertion (RPE Grade)</span>
+                <span id="rpe-selected" class="text-sky-700 font-semibold normal-case">selected: hard (1-2 rir)</span>
+              </div>
+              <div id="rpe-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3"><button type="button" data-g="0" aria-pressed="false" class="py-3 px-3.5 rounded-xl text-left transition border border-sky-200 bg-white hover:bg-sky-50">
+          <div class="text-xs font-extrabold text-slate-900 flex items-center justify-between gap-1">Easy (4+ RIR)</div>
+          <div class="text-[11px] text-slate-400">Warmup / moderate speed</div></button><button type="button" data-g="1" aria-pressed="false" class="py-3 px-3.5 rounded-xl text-left transition border border-sky-200 bg-white hover:bg-sky-50">
+          <div class="text-xs font-extrabold text-slate-900 flex items-center justify-between gap-1">Moderate (3 RIR)</div>
+          <div class="text-[11px] text-slate-400">Bar speed crisp</div></button><button type="button" data-g="2" aria-pressed="true" class="py-3 px-3.5 rounded-xl text-left transition border-2 border-sky-500 bg-sky-50/80 shadow-sm">
+          <div class="text-xs font-extrabold text-sky-900 flex items-center justify-between gap-1">Hard (1-2 RIR)<span aria-hidden="true" class="material-symbols-outlined text-sky-700 text-base">check_circle</span></div>
+          <div class="text-[11px] text-sky-700">True hypertrophic load</div></button><button type="button" data-g="3" aria-pressed="false" class="py-3 px-3.5 rounded-xl text-left transition border border-rose-200 bg-rose-50/40 hover:bg-rose-50">
+          <div class="text-xs font-extrabold text-rose-800 flex items-center justify-between gap-1">Failure (0 RIR)</div>
+          <div class="text-[11px] text-rose-600">Zero reps remaining</div></button></div>
+            </div>
+
+            <div>
+              <label for="bio-notes" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Athlete Biofeedback &amp; Mechanical Notes</label>
+              <textarea id="bio-notes" rows="2" placeholder="e.g. Shoulder felt stable on pause; slight bar deceleration on rep 7." class="w-full text-xs p-3.5 rounded-xl bg-sky-50/50 border border-sky-200 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none">Bar speed stayed uniform through rep 6. Rep 7 had minor left elbow flare but locked out cleanly.</textarea>
+            </div>
+
+            <div class="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-3 pt-1">
+              <button type="button" id="skip-set" class="px-4 py-2.5 rounded-xl border border-sky-200 bg-white text-slate-600 hover:text-slate-900 hover:bg-sky-50 text-xs font-bold transition">Skip Set</button>
+              <button type="button" id="log-set" class="px-6 py-3 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition flex items-center justify-center gap-2">
+                <span aria-hidden="true" class="material-symbols-outlined text-lg">done_all</span>
+                <span id="log-label">Log &amp; Start 120s Rest</span>
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <!-- RIGHT: analytics -->
+        <aside class="xl:col-span-4 xl:row-span-1 space-y-6 xl:sticky xl:top-24 xl:self-start">
+          <div class="bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl p-5 sm:p-6 shadow-sm space-y-5">
+            <div class="flex items-center justify-between pb-3 border-b border-sky-100">
+              <div class="flex items-center gap-2">
+                <span aria-hidden="true" class="material-symbols-outlined text-sky-700 text-xl">analytics</span>
+                <h3 class="text-base font-bold text-slate-900 font-['Outfit']">Session Analytics</h3>
+              </div>
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Live Estimation</span>
+            </div>
+
+            <div class="p-4 bg-sky-50/70 rounded-xl border border-sky-100 space-y-1">
+              <div class="flex items-center justify-between text-[11px] text-slate-400 uppercase font-medium">
+                <span>Total Estimated Tonnage</span>
+                <span aria-hidden="true" class="material-symbols-outlined text-lg text-sky-500">fitness_center</span>
+              </div>
+              <div class="text-3xl font-black text-sky-700 font-['Outfit']"><span id="tonnage">7,009</span> <span class="text-lg font-bold text-slate-400">kg</span></div>
+              <div class="text-[11px] text-emerald-600 font-semibold">+8.4% vs previous split</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 bg-sky-50/60 border border-sky-100 rounded-xl">
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Planned Duration</div>
+                <div class="text-lg font-extrabold text-slate-900 font-['Outfit']"><span id="duration">37</span> <span class="text-xs font-bold text-slate-400">mins</span></div>
+                <div class="text-[10px] text-emerald-600 font-semibold flex items-center gap-0.5"><span aria-hidden="true" class="material-symbols-outlined text-xs">schedule</span><span id="rest-total">24m rest total</span></div>
+              </div>
+              <div class="p-3 bg-sky-50/60 border border-sky-100 rounded-xl">
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Workload Density</div>
+                <div class="text-lg font-extrabold text-slate-900 font-['Outfit']"><span id="density">189.4</span> <span class="text-xs font-bold text-slate-400">kg/m</span></div>
+                <div class="text-[10px] text-sky-700 font-semibold flex items-center gap-0.5"><span aria-hidden="true" class="material-symbols-outlined text-xs">speed</span>High Intensity</div>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-700">Muscle Fatigue Distribution</span>
+                <span class="text-[11px] text-sky-700 font-semibold">Share of sets</span>
+              </div>
+              <div id="fatigue" class="space-y-3 text-xs"><div><div class="flex justify-between gap-3 text-slate-600 mb-1"><span>Pectoralis Major (Clavicular &amp; Sternal)</span><span class="font-bold text-slate-900">41%</span></div><div class="w-full h-2 bg-sky-100 rounded-full overflow-hidden"><div class="h-full bg-sky-500 rounded-full transition-all duration-500" style="width:41%"></div></div></div><div><div class="flex justify-between gap-3 text-slate-600 mb-1"><span>Anterior, Lateral &amp; Rear Deltoids</span><span class="font-bold text-slate-900">41%</span></div><div class="w-full h-2 bg-sky-100 rounded-full overflow-hidden"><div class="h-full bg-sky-400 rounded-full transition-all duration-500" style="width:41%"></div></div></div><div><div class="flex justify-between gap-3 text-slate-600 mb-1"><span>Triceps Brachii (Medial &amp; Long)</span><span class="font-bold text-slate-900">18%</span></div><div class="w-full h-2 bg-sky-100 rounded-full overflow-hidden"><div class="h-full bg-sky-300 rounded-full transition-all duration-500" style="width:18%"></div></div></div></div>
+            </div>
+
+            <div class="bg-sky-50/60 border border-sky-200/80 rounded-xl p-4 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-sky-700 text-white flex items-center justify-center shadow-sm"><span aria-hidden="true" class="material-symbols-outlined text-xl">timer</span></div>
+                <div>
+                  <div class="text-xs font-bold text-slate-900">Auto Rest Timer</div>
+                  <div class="text-[11px] text-slate-500">Countdown after each logged set</div>
+                </div>
+              </div>
+              <label class="relative inline-flex items-center cursor-bar shrink-0">
+                <input id="auto-rest" checked="" type="checkbox" class="sr-only peer">
+                <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-sky-500 transition-colors after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-slate-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"></div>
+                <span class="sr-only">Auto rest timer</span>
+              </label>
+            </div>
+
+            <div class="pt-3 border-t border-sky-100">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-600 block mb-2.5">Preset Equipment Rack</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-[11px] font-medium bg-slate-50 text-slate-700 px-2.5 py-1 rounded-lg border border-slate-200 flex items-center gap-1"><span aria-hidden="true" class="material-symbols-outlined text-sm text-emerald-600">check</span>Olympic Barbell</span>
+                <span class="text-[11px] font-medium bg-slate-50 text-slate-700 px-2.5 py-1 rounded-lg border border-slate-200 flex items-center gap-1"><span aria-hidden="true" class="material-symbols-outlined text-sm text-emerald-600">check</span>Dumbbells 10-40kg</span>
+                <span class="text-[11px] font-medium bg-slate-50 text-slate-700 px-2.5 py-1 rounded-lg border border-slate-200 flex items-center gap-1"><span aria-hidden="true" class="material-symbols-outlined text-sm text-emerald-600">check</span>Dip Station</span>
+                <span class="text-[11px] font-medium bg-slate-50 text-slate-700 px-2.5 py-1 rounded-lg border border-slate-200 flex items-center gap-1"><span aria-hidden="true" class="material-symbols-outlined text-sm text-emerald-600">check</span>Dual Pulley Cable</span>
+              </div>
+            </div>
           </div>
-          <div id="target-window"></div>
-        </div>
-      </div>
 
-      <div>
-        <div>
-          <span>Perceived Exertion (RPE Grade)</span>
-          <span id="rpe-selected"></span>
-        </div>
-        <div id="rpe-grid"></div>
+          <div class="bg-white/85 backdrop-blur-xl border border-sky-200/70 rounded-2xl p-5 flex items-start gap-3.5 shadow-sm">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-sky-600 to-sky-400 flex items-center justify-center text-white font-bold text-xs shrink-0 shadow-sm">KA</div>
+            <div>
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold text-slate-900">Coach Karim Adel</span>
+                <span class="text-[10px] text-sky-700 font-semibold bg-sky-100 px-2 py-0.5 rounded-full">Biomechanics</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">“Focus on keeping the scapulae fully retracted throughout the paused bench presses. Do not sacrifice range of motion for extra load on the cable lateral raises.”</p>
+            </div>
+          </div>
+        </aside>
       </div>
+    </div>
+  </main>
 
-      <div>
-        <label for="bio-notes">Athlete Biofeedback &amp; Mechanical Notes</label>
-        <textarea id="bio-notes" rows="2" placeholder="e.g. Shoulder felt stable on pause; slight bar deceleration on rep 7.">Bar speed stayed uniform through rep 6. Rep 7 had minor left elbow flare but locked out cleanly.</textarea>
-      </div>
-
-      <div>
-        <button type="button" id="skip-set">Skip Set</button>
-        <button type="button" id="log-set">
-          <span class="material-symbols-outlined">done_all</span>
-          <span id="log-label">Log &amp; Start Rest</span>
-        </button>
-      </div>
-    </section>
+  <!-- Toast -->
+  <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] opacity-0 translate-y-3 transition-all duration-300 bg-slate-900 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-lg flex items-center gap-2 max-w-[90vw]" role="status">
+    <span aria-hidden="true" class="material-symbols-outlined text-base text-sky-300">check_circle</span><span id="toast-text"></span>
   </div>
-
-  <!-- RIGHT: analytics -->
-  <aside>
-    <div>
-      <div>
-        <div>
-          <span class="material-symbols-outlined">analytics</span>
-          <h3>Session Analytics</h3>
-        </div>
-        <span>Live Estimation</span>
-      </div>
-
-            <div>
-        <div>
-          <span>Total Estimated Tonnage</span>
-          <span class="material-symbols-outlined">fitness_center</span>
-        </div>
-        <div><span id="tonnage">0</span> <span>kg</span></div>
-        <div>+8.4% vs previous split</div>
-      </div>
-
-      <div>
-        <div>
-          <div>Planned Duration</div>
-          <div><span id="duration">0</span> <span>mins</span></div>
-          <div><span class="material-symbols-outlined">schedule</span><span id="rest-total">0m rest total</span></div>
-        </div>
-        <div>
-          <div>Workload Density</div>
-          <div><span id="density">0</span> <span>kg/m</span></div>
-          <div><span class="material-symbols-outlined">speed</span>High Intensity</div>
-        </div>
-      </div>
-
-      <div>
-        <div>
-          <span>Muscle Fatigue Distribution</span>
-          <span>Share of sets</span>
-        </div>
-        <div id="fatigue"></div>
-      </div>
-
-      <div>
-        <div>
-          <div><span class="material-symbols-outlined">timer</span></div>
-          <div>
-            <div>Auto Rest Timer</div>
-            <div>Countdown after each logged set</div>
-          </div>
-        </div>
-        <label>
-          <input id="auto-rest" checked type="checkbox">
-          <div></div>
-          <span class="sr-only">Auto rest timer</span>
-        </label>
-      </div>
-
-      <div>
-        <span>Preset Equipment Rack</span>
-        <div>
-          <span><span class="material-symbols-outlined">check</span>Olympic Barbell</span>
-          <span><span class="material-symbols-outlined">check</span>Dumbbells 10-40kg</span>
-          <span><span class="material-symbols-outlined">check</span>Dip Station</span>
-          <span><span class="material-symbols-outlined">check</span>Dual Pulley Cable</span>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div>KA</div>
-      <div>
-        <div>
-          <span>Coach Karim Adel</span>
-          <span>Biomechanics</span>
-        </div>
-        <p>“Focus on keeping the scapulae fully retracted throughout the paused bench presses. Do not sacrifice range of motion for extra load on the cable lateral raises.”</p>
-      </div>
-    </div>
-  </aside>
-</div>
-</div>
-</main>
-
-<!-- Toast -->
-<div id="toast" role="status">
-  <span class="material-symbols-outlined">check_circle</span><span id="toast-text"></span>
-</div>
 
   <!-- Unified Footer -->
-<footer>
-  <div>
-    <div>
-      <div><span>99</span></div>
-      <span>© 2026 Fit 99 Performance Ecosystem. Glacier Companion Framework.</span>
+  <footer class="w-full bg-white/80 backdrop-blur-md border-t border-sky-200/70 py-6">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-full bg-sky-500 flex items-center justify-center"><span class="text-xs text-white font-bold leading-none">99</span></div>
+        <span class="text-xs text-slate-500">© 2025 Fit 99 Performance Ecosystem. Glacier Companion Framework.</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold text-slate-500">
+        <a class="hover:text-sky-600 transition-colors" href="dashboard.html">Overview</a>
+        <a class="hover:text-sky-600 transition-colors" href="exercises.html">Workouts</a>
+        <a class="hover:text-sky-600 transition-colors" href="exercise-detail.html">Routine</a>
+        <a class="hover:text-sky-600 transition-colors" href="routine-builder.html">Builder</a>
+        <a class="hover:text-sky-600 transition-colors" href="nutrition.html">Nutrition</a>
+        <a class="hover:text-sky-600 transition-colors" href="food-log.html">Food Log</a>
+        <a class="hover:text-sky-600 transition-colors" href="profile.html">Profile</a>
+        <a class="hover:text-sky-600 transition-colors" href="index.html">Tour</a>
+        <a class="hover:text-sky-600 transition-colors" href="login.html">Cairo Gate</a>
+      </div>
     </div>
-    <div>
-      <a href="dashboard.html">Overview</a>
-      <a href="exercises.html">Workouts</a>
-      <a href="exercise-detail.html">Routine</a>
-      <a href="routine-builder.html">Builder</a>
-      <a href="nutrition.html">Nutrition</a>
-      <a href="food-log.html">Food Log</a>
-      <a href="profile.html">Profile</a>
-      <a href="index.html">Tour</a>
-      <a href="login.html">Cairo Gate</a>
-    </div>
-  </div>
-</footer>
-</body>
-</html>
+  </footer>
+
+</body></html>
