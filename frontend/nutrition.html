@@ -1,418 +1,439 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Fit 99 - Nutrition &amp; Meal Planner</title>
-  
-  <!-- External Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  
-  <!-- Local Built Tailwind CSS (NO CDN) -->
+
+  <!-- Local built Tailwind CSS (no CDN) -->
   <link rel="stylesheet" href="css/output.css">
 </head>
-<body>
+<body class="bg-gradient-to-br from-[#f0f9ff] via-[#e6f4fe] to-[#dcf0fd] text-slate-800 antialiased min-h-screen selection:bg-sky-200 selection:text-sky-900 flex flex-col justify-between font-['Inter']">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-sky-700 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to main content</a>
 
   <!-- Unified Navigation Header -->
-  <header>
-    <div>
-      <div>
-        <a href="dashboard.html">
-          <div>
-            <span>99</span>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-sky-200/70 shadow-[0_4px_20px_rgba(186,230,253,0.35)]">
+    <div class="h-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-6">
+        <a class="flex items-center gap-2.5 group" href="dashboard.html">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-sky-500 to-sky-400 flex items-center justify-center shadow-md shadow-sky-400/30">
+            <span class="font-black text-white text-lg tracking-tight">99</span>
           </div>
-          <div>
-            <span>FIT <span>99</span></span>
-            <span>Glacier Performance</span>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-slate-900 tracking-tight text-lg leading-tight flex items-center gap-1 font-['Outfit']">
+              FIT <span class="text-sky-700">99</span>
+            </span>
+            <span class="text-[9px] font-bold uppercase tracking-widest text-sky-700">Glacier Performance</span>
           </div>
         </a>
-        <nav aria-label="Main Navigation">
-          <a href="dashboard.html">Overview</a>
-          <a href="exercises.html">Workouts</a>
-          <a href="exercise-detail.html">Active Routine</a>
-          <a href="routine-builder.html">Workout Builder</a>
-          <a href="nutrition.html" aria-current="page">Nutrition</a>
-          <a href="food-log.html">Log Food</a>
-          <a href="profile.html">Profile &amp; Metrics</a>
-          <a href="index.html">Club Tour</a>
+        <nav aria-label="Primary" class="hidden xl:flex items-center gap-1 text-xs font-semibold">
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="dashboard.html">Overview</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="exercises.html">Workouts</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="exercise-detail.html">Active Routine</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="routine-builder.html">Workout Builder</a>
+          <a class="px-3 py-1.5 rounded-full transition-all bg-sky-700 text-white shadow-sm" href="nutrition.html">Nutrition</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="food-log.html">Log Food</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="profile.html">Profile &amp; Metrics</a>
+          <a class="px-3 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900 hover:bg-sky-100/70" href="index.html">Club Tour</a>
         </nav>
       </div>
-      <div>
-        <a href="login.html">
-          <span class="material-symbols-outlined">contactless</span>
+      <div class="flex items-center gap-3">
+        <a class="px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-semibold text-xs hover:bg-sky-100 transition-colors flex items-center gap-1.5" href="login.html">
+          <span aria-hidden="true" class="material-symbols-outlined text-[16px]">contactless</span>
           <span>Cairo Gate</span>
         </a>
-        <div></div>
-        <a href="profile.html">
-          <div>OH</div>
-          <div>
-            <span>Omar Hassan</span>
-            <span>Pro Athlete</span>
+        <div class="h-6 w-px bg-sky-200 hidden sm:block"></div>
+        <a class="flex items-center gap-2 pl-1 group" href="profile.html">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-sky-400 to-sky-600 flex items-center justify-center text-white text-xs font-bold shadow-sm">
+            OH
+          </div>
+          <div class="hidden md:flex flex-col text-left">
+            <span class="text-xs text-slate-900 font-bold leading-tight group-hover:text-sky-600 transition-colors">Omar Hassan</span>
+            <span class="text-[10px] text-sky-700 font-bold uppercase tracking-wider">Pro Athlete</span>
           </div>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Navigation Sub-bar -->
-  <div>
-    <nav aria-label="Mobile Navigation">
-      <a href="dashboard.html">Overview</a>
-      <a href="exercises.html">Workouts</a>
-      <a href="exercise-detail.html">Routine</a>
-      <a href="routine-builder.html">Builder</a>
-      <a href="nutrition.html" aria-current="page">Nutrition</a>
-      <a href="food-log.html">Food Log</a>
-      <a href="profile.html">Profile</a>
-    </nav>
-  </div>
+  <!-- Mobile Sub-bar -->
+  <nav aria-label="Mobile quick navigation" class="xl:hidden fixed top-16 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-sky-200/50 px-4 py-2 overflow-x-auto flex gap-2">
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="dashboard.html">Overview</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="exercises.html">Workouts</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="exercise-detail.html">Routine</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="routine-builder.html">Builder</a>
+    <a class="text-xs px-3 py-1 rounded-full bg-sky-700 text-white font-semibold whitespace-nowrap" href="nutrition.html">Nutrition</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="food-log.html">Food Log</a>
+    <a class="text-xs px-3 py-1 rounded-full text-slate-600 whitespace-nowrap" href="profile.html">Profile</a>
+  </nav>
 
-  <main>
+  <main id="main-content" tabindex="-1" class="focus:outline-none flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 xl:pt-20 pb-16 space-y-6">
+
     <!-- Page Header & Global Actions -->
-    <div>
-      <div>
-        <div>
-          <span class="material-symbols-outlined">nutrition</span>
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2">
+      <div class="flex items-start gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-500 to-cyan-400 flex items-center justify-center text-white shadow-md shadow-sky-500/20 shrink-0">
+          <span aria-hidden="true" class="material-symbols-outlined text-[26px]">nutrition</span>
         </div>
         <div>
-          <h1>Nutrition &amp; Meal Planner</h1>
-          <p>Metabolic telemetry, adaptive macronutrient splits, and AI-synced meal protocols.</p>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-['Outfit']">Nutrition &amp; Meal Planner</h1>
+          <p class="text-sm text-slate-500 mt-0.5 font-medium">Metabolic telemetry, adaptive macronutrient splits, and AI-synced meal protocols.</p>
         </div>
       </div>
       
-      <div>
-        <a href="food-log.html">
-          <span class="material-symbols-outlined">add</span>
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center gap-2.5">
+        <a href="food-log.html" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 shadow-md flex items-center gap-2 transition-all">
+          <span aria-hidden="true" class="material-symbols-outlined text-[19px]">add</span>
           <span>Log Food or Meal</span>
         </a>
       </div>
     </div>
 
-    <!-- Daily Energy & Macros Summary Grid -->
-    <div>
-      <!-- Energy Budget Card -->
-      <div>
-        <div></div>
-        <div>
-          <span>Daily Energy Budget</span>
-          <span>66%</span>
+    <!-- Daily Energy & Macro Overview (Top Hero Grid) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+      <!-- Energy Card -->
+      <div class="rounded-2xl p-5 bg-white/85 backdrop-blur-md border border-sky-200/60 shadow-sm flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute -right-4 -bottom-4 w-28 h-28 bg-sky-200/30 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-sky-700">Daily Energy Budget</span>
+          <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-sky-50 border border-sky-200 text-sky-700">66%</span>
         </div>
-        <div>
-          <div>
-            <span>1,450</span>
-            <span>/ 2,200 kcal</span>
+        <div class="mt-3">
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-3xl font-extrabold text-slate-900 tracking-tight font-['Outfit']">1,450</span>
+            <span class="text-sm font-bold text-slate-400">/ 2,200 kcal</span>
           </div>
-          <p>
-            <span></span>
+          <p class="text-xs font-semibold text-emerald-600 mt-1 flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
             750 kcal remaining
           </p>
         </div>
-        <div>
-          <div>
-            <div style="width: 66%;"></div>
+        <div class="mt-4">
+          <div class="w-full bg-sky-100/80 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-gradient-to-r from-sky-400 to-cyan-500 h-full rounded-full transition-all duration-500" style="width: 66%;"></div>
           </div>
         </div>
       </div>
 
       <!-- Protein Card -->
-      <div>
-        <div>
-          <span>Protein Target</span>
-          <span>81%</span>
+      <div class="rounded-2xl p-5 bg-white/85 backdrop-blur-md border border-sky-200/60 shadow-sm flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Protein Target</span>
+          <span class="text-xs font-bold text-sky-700">81%</span>
         </div>
-        <div>
-          <div>
-            <span>146</span>
-            <span>/ 180g</span>
+        <div class="mt-3">
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-3xl font-extrabold text-slate-900 font-['Outfit']">146</span>
+            <span class="text-sm font-bold text-slate-400">/ 180g</span>
           </div>
-          <p>34g to reach target</p>
+          <p class="text-xs font-medium text-slate-500 mt-1">34g to reach target</p>
         </div>
-        <div>
-          <div>
-            <div style="width: 81%;"></div>
+        <div class="mt-4">
+          <div class="w-full bg-sky-100/80 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-sky-500 h-full rounded-full" style="width: 81%;"></div>
           </div>
         </div>
       </div>
 
       <!-- Carbohydrates Card -->
-      <div>
-        <div>
-          <span>Carbohydrates</span>
-          <span>70%</span>
+      <div class="rounded-2xl p-5 bg-white/85 backdrop-blur-md border border-sky-200/60 shadow-sm flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Carbohydrates</span>
+          <span class="text-xs font-bold text-cyan-700">70%</span>
         </div>
-        <div>
-          <div>
-            <span>154</span>
-            <span>/ 220g</span>
+        <div class="mt-3">
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-3xl font-extrabold text-slate-900 font-['Outfit']">154</span>
+            <span class="text-sm font-bold text-slate-400">/ 220g</span>
           </div>
-          <p>66g to reach target</p>
+          <p class="text-xs font-medium text-slate-500 mt-1">66g to reach target</p>
         </div>
-        <div>
-          <div>
-            <div style="width: 70%;"></div>
+        <div class="mt-4">
+          <div class="w-full bg-sky-100/80 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-cyan-500 h-full rounded-full" style="width: 70%;"></div>
           </div>
         </div>
       </div>
 
       <!-- Fats Card -->
-      <div>
-        <div>
-          <span>Healthy Fats</span>
-          <span>67%</span>
+      <div class="rounded-2xl p-5 bg-white/85 backdrop-blur-md border border-sky-200/60 shadow-sm flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Healthy Fats</span>
+          <span class="text-xs font-bold text-violet-700">67%</span>
         </div>
-        <div>
-          <div>
-            <span>44</span>
-            <span>/ 65g</span>
+        <div class="mt-3">
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-3xl font-extrabold text-slate-900 font-['Outfit']">44</span>
+            <span class="text-sm font-bold text-slate-400">/ 65g</span>
           </div>
-          <p>21g to reach target</p>
+          <p class="text-xs font-medium text-slate-500 mt-1">21g to reach target</p>
         </div>
-        <div>
-          <div>
-            <div style="width: 67%;"></div>
+        <div class="mt-4">
+          <div class="w-full bg-sky-100/80 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-violet-500 h-full rounded-full" style="width: 67%;"></div>
           </div>
         </div>
       </div>
+
     </div>
 
-    <!-- Main Content Layout -->
-    <div>
-      <!-- Meal Protocols Section -->
-      <section>
-        <div>
-          <div>
-            <h2>Today's Meal Protocol</h2>
-            <span>4 planned</span>
+    <!-- Main Content Area: 2-Column Desktop Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- LEFT / MAIN COLUMN: Daily Meal Protocol (Spans 7 cols) -->
+      <section class="lg:col-span-7 space-y-4">
+        
+        <!-- Header & Filter Tabs -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white/70 p-3 sm:px-4 rounded-2xl border border-sky-100">
+          <div class="flex items-center gap-2">
+            <h2 class="font-bold text-lg text-slate-900 font-['Outfit']">Today's Meal Protocol</h2>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 text-sky-700 border border-sky-200">4 planned</span>
           </div>
-          <div>
-            <button type="button">All</button>
-            <button type="button">Logged</button>
-            <button type="button">Upcoming</button>
+          <div class="flex items-center gap-1 bg-sky-100/60 p-1 rounded-xl text-xs font-semibold">
+            <button class="px-3 py-1 rounded-lg bg-white text-slate-900 shadow-sm">All</button>
+            <button class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900">Logged</button>
+            <button class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900">Upcoming</button>
           </div>
         </div>
 
-        <!-- Meal 1: Breakfast -->
-        <div>
-          <div>
-            <div>
-              <div>
-                <span class="material-symbols-outlined">check</span>
+        <!-- Meal 1: Breakfast (Logged) -->
+        <div class="rounded-2xl p-5 bg-white/85 backdrop-blur-md border border-sky-200/60 shadow-sm hover:shadow-md transition-all">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                <span aria-hidden="true" class="material-symbols-outlined text-[18px]">check</span>
               </div>
               <div>
-                <div>
-                  <h3>Breakfast</h3>
-                  <span>8:15 AM</span>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-base text-slate-900 font-['Outfit']">Breakfast</h3>
+                  <span class="text-xs font-semibold text-slate-400">8:15 AM</span>
                 </div>
-                <p>Oatmeal, Eggs &amp; Banana</p>
-                <div>
-                  <span>520 kcal</span>
-                  <span>P 42g</span>
-                  <span>C 64g</span>
-                  <span>F 14g</span>
+                <p class="text-sm font-medium text-slate-700 mt-1">Oatmeal, Eggs &amp; Banana</p>
+                <div class="flex flex-wrap items-center gap-2 mt-2">
+                  <span class="text-xs font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded-md">520 kcal</span>
+                  <span class="text-xs font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-md border border-sky-100">P 42g</span>
+                  <span class="text-xs font-semibold text-cyan-700 bg-cyan-50 px-2 py-0.5 rounded-md border border-cyan-100">C 64g</span>
+                  <span class="text-xs font-semibold text-violet-700 bg-violet-50 px-2 py-0.5 rounded-md border border-violet-100">F 14g</span>
                 </div>
               </div>
             </div>
-            <span>
-              <span class="material-symbols-outlined">done_all</span> Logged
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/70">
+              <span aria-hidden="true" class="material-symbols-outlined text-[14px]">done_all</span> Logged
             </span>
           </div>
         </div>
 
-        <!-- Meal 2: Lunch -->
-        <div>
-          <div>
-            <div>
-              <div>
-                <span class="material-symbols-outlined">check</span>
+        <!-- Meal 2: Lunch (Logged) -->
+        <div class="rounded-2xl p-5 bg-white/85 backdrop-blur-md border border-sky-200/60 shadow-sm hover:shadow-md transition-all">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                <span aria-hidden="true" class="material-symbols-outlined text-[18px]">check</span>
               </div>
               <div>
-                <div>
-                  <h3>Lunch</h3>
-                  <span>1:00 PM</span>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-base text-slate-900 font-['Outfit']">Lunch</h3>
+                  <span class="text-xs font-semibold text-slate-400">1:00 PM</span>
                 </div>
-                <p>Grilled Chicken Breast, Basmati Rice &amp; Avocado Salad</p>
-                <div>
-                  <span>680 kcal</span>
-                  <span>P 58g</span>
-                  <span>C 72g</span>
-                  <span>F 16g</span>
+                <p class="text-sm font-medium text-slate-700 mt-1">Grilled Chicken Breast, Basmati Rice &amp; Avocado Salad</p>
+                <div class="flex flex-wrap items-center gap-2 mt-2">
+                  <span class="text-xs font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded-md">680 kcal</span>
+                  <span class="text-xs font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-md border border-sky-100">P 58g</span>
+                  <span class="text-xs font-semibold text-cyan-700 bg-cyan-50 px-2 py-0.5 rounded-md border border-cyan-100">C 72g</span>
+                  <span class="text-xs font-semibold text-violet-700 bg-violet-50 px-2 py-0.5 rounded-md border border-violet-100">F 16g</span>
                 </div>
               </div>
             </div>
-            <span>
-              <span class="material-symbols-outlined">done_all</span> Logged
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/70">
+              <span aria-hidden="true" class="material-symbols-outlined text-[14px]">done_all</span> Logged
             </span>
           </div>
         </div>
 
-        <!-- Meal 3: Pre-Workout Snack -->
-        <div>
-          <div>
-            <div>
-              <div>
-                <span class="material-symbols-outlined">bolt</span>
+        <!-- Meal 3: Pre-Workout Snack (NOW / Active Highlight) -->
+        <div class="rounded-2xl p-5 bg-white/95 backdrop-blur-md border-2 border-sky-400 shadow-md hover:shadow-lg transition-all relative overflow-hidden">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-sky-500 to-cyan-400 text-white flex items-center justify-center font-bold shrink-0 mt-0.5 shadow-sm">
+                <span aria-hidden="true" class="material-symbols-outlined text-[18px]">bolt</span>
               </div>
               <div>
-                <div>
-                  <h3>Pre-Workout Snack</h3>
-                  <span>NOW • 5:30 PM</span>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-base text-slate-900 font-['Outfit']">Pre-Workout Snack</h3>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-sky-700 text-white">NOW • 5:30 PM</span>
                 </div>
-                <p>Greek Yogurt, Honey, Blueberries &amp; Whey</p>
-                <div>
-                  <span>250 kcal</span>
-                  <span>P 18g</span>
-                  <span>C 32g</span>
-                  <span>F 4g</span>
+                <p class="text-sm font-semibold text-slate-800 mt-1">Greek Yogurt, Honey, Blueberries &amp; Whey</p>
+                <div class="flex flex-wrap items-center gap-2 mt-2">
+                  <span class="text-xs font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded-md">250 kcal</span>
+                  <span class="text-xs font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-md border border-sky-100">P 18g</span>
+                  <span class="text-xs font-semibold text-cyan-700 bg-cyan-50 px-2 py-0.5 rounded-md border border-cyan-100">C 32g</span>
+                  <span class="text-xs font-semibold text-violet-700 bg-violet-50 px-2 py-0.5 rounded-md border border-violet-100">F 4g</span>
                 </div>
               </div>
             </div>
-            <div>
-              <span>
-                <span></span> Ready
+            <div class="flex items-center sm:flex-col sm:items-end gap-2 shrink-0">
+              <span class="inline-flex items-center gap-1 text-xs font-bold text-sky-700 bg-sky-100/90 px-2.5 py-1 rounded-full border border-sky-300">
+                <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span> Ready
               </span>
-              <a href="food-log.html">
-                <span class="material-symbols-outlined">check_circle</span>
+              <a href="food-log.html" class="px-4 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 shadow-sm transition-all flex items-center gap-1">
+                <span aria-hidden="true" class="material-symbols-outlined text-[15px]">check_circle</span>
                 <span>Confirm</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Meal 4: Dinner -->
-        <div>
-          <div>
-            <div>
-              <div>
-                <span class="material-symbols-outlined">schedule</span>
+        <!-- Meal 4: Dinner (Planned) -->
+        <div class="rounded-2xl p-5 bg-white/70 backdrop-blur-md border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                <span aria-hidden="true" class="material-symbols-outlined text-[18px]">schedule</span>
               </div>
               <div>
-                <div>
-                  <h3>Dinner</h3>
-                  <span>Planned • 8:30 PM</span>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-base text-slate-800 font-['Outfit']">Dinner</h3>
+                  <span class="text-xs font-semibold text-slate-400">Planned • 8:30 PM</span>
                 </div>
-                <p>Atlantic Salmon, Roasted Sweet Potatoes &amp; Asparagus</p>
-                <div>
-                  <span>750 kcal</span>
-                  <span>P 48g</span>
-                  <span>C 60g</span>
-                  <span>F 28g</span>
+                <p class="text-sm font-medium text-slate-600 mt-1">Atlantic Salmon, Roasted Sweet Potatoes &amp; Asparagus</p>
+                <div class="flex flex-wrap items-center gap-2 mt-2">
+                  <span class="text-xs font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded-md">750 kcal</span>
+                  <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">P 48g</span>
+                  <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">C 60g</span>
+                  <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">F 28g</span>
                 </div>
               </div>
             </div>
-            <span>Planned</span>
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
+              Planned
+            </span>
           </div>
         </div>
 
-        <a href="food-log.html">
-          <span class="material-symbols-outlined">add_circle</span>
+        <!-- Add Custom Food Shortcut -->
+        <a href="food-log.html" class="w-full py-3.5 px-4 rounded-2xl border-2 border-dashed border-sky-300 hover:border-sky-500 bg-white/60 hover:bg-white text-sky-700 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+          <span aria-hidden="true" class="material-symbols-outlined text-[20px]">add_circle</span>
           <span>Open Food Log &amp; Ingredient Breakdown</span>
         </a>
+
       </section>
 
-      <!-- Sidebar Section: Hydration & Telemetry -->
-      <section>
+      <!-- RIGHT COLUMN: Telemetry & Biomarkers (Spans 5 cols) -->
+      <section class="lg:col-span-5 space-y-4">
+        
         <!-- Hydration Tracker Widget -->
-        <div>
-          <div>
-            <div>
-              <div>
-                <span class="material-symbols-outlined">water_drop</span>
+        <div class="rounded-2xl p-5 bg-white/85 backdrop-blur-md border border-sky-200/60 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center">
+                <span aria-hidden="true" class="material-symbols-outlined text-[19px]">water_drop</span>
               </div>
-              <h3>Hydration Tracker</h3>
+              <h3 class="font-bold text-base text-slate-900 font-['Outfit']">Hydration Tracker</h3>
             </div>
-            <span>2.4L / 3.0L (80%)</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold text-sky-700 bg-sky-50 border border-sky-200">
+              2.4L / 3.0L (80%)
+            </span>
           </div>
-          <div>
-            <div style="width: 80%;"></div>
+          <div class="w-full bg-sky-100/80 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-gradient-to-r from-sky-400 to-cyan-500 h-full rounded-full" style="width: 80%;"></div>
           </div>
-          <div>
-            <span>600 ml to daily hydration goal</span>
-            <span>+250 ml logged</span>
+          <div class="flex items-center justify-between pt-1">
+            <span class="text-xs text-slate-500 font-medium">600 ml to daily hydration goal</span>
+            <span class="text-xs font-bold text-sky-700">+250 ml logged</span>
           </div>
         </div>
 
-        <!-- Calorie Compliance Chart -->
-        <div>
-          <div>
+        <!-- Weekly Calorie Compliance Bar Chart -->
+        <div class="rounded-2xl p-5 bg-white/85 backdrop-blur-md border border-sky-200/60 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
             <div>
-              <span>Telemetry</span>
-              <h3>Weekly Calorie Compliance</h3>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-sky-700">Telemetry</span>
+              <h3 class="font-bold text-base text-slate-900 font-['Outfit']">Weekly Calorie Compliance</h3>
             </div>
-            <span>96% Average</span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-200">
+              96% Average
+            </span>
           </div>
           
-          <div>
-            <svg viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weekly Calorie Compliance Chart">
-              <line x1="10" x2="310" y1="42" y2="42"></line>
-              <text x="240" y="38">100% TARGET</text>
+          <!-- Clean SVG Compliance Bar Chart -->
+          <div class="pt-2">
+            <svg class="w-full h-36" fill="none" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+              <line stroke="#bae6fd" stroke-dasharray="4 4" stroke-width="1.5" x1="10" x2="310" y1="42" y2="42"></line>
+              <text fill="#0284c7" font-size="8" font-weight="700" x="240" y="38">100% TARGET</text>
               
               <!-- Mon -->
-              <rect height="52" width="22" x="20" y="46"></rect>
-              <text x="27" y="112">M</text>
+              <rect fill="#38bdf8" height="52" rx="4" width="22" x="20" y="46"></rect>
+              <text fill="#64748b" font-size="10" font-weight="600" x="27" y="112">M</text>
               
               <!-- Tue -->
-              <rect height="58" width="22" x="62" y="40"></rect>
-              <text x="69" y="112">T</text>
+              <rect fill="#0ea5e9" height="58" rx="4" width="22" x="62" y="40"></rect>
+              <text fill="#64748b" font-size="10" font-weight="600" x="69" y="112">T</text>
               
               <!-- Wed -->
-              <rect height="46" width="22" x="104" y="52"></rect>
-              <text x="110" y="112">W</text>
+              <rect fill="#38bdf8" height="46" rx="4" width="22" x="104" y="52"></rect>
+              <text fill="#64748b" font-size="10" font-weight="600" x="110" y="112">W</text>
               
               <!-- Thu -->
-              <rect height="64" width="22" x="146" y="34"></rect>
-              <text x="153" y="112">T</text>
+              <rect fill="#0284c7" height="64" rx="4" width="22" x="146" y="34"></rect>
+              <text fill="#64748b" font-size="10" font-weight="600" x="153" y="112">T</text>
               
               <!-- Fri -->
-              <rect height="54" width="22" x="188" y="44"></rect>
-              <text x="195" y="112">F</text>
+              <rect fill="#0284c7" height="54" rx="4" width="22" x="188" y="44"></rect>
+              <text fill="#64748b" font-size="10" font-weight="600" x="195" y="112">F</text>
               
-              <!-- Sat -->
-              <rect height="56" width="22" x="230" y="42"></rect>
-              <text x="237" y="112">S</text>
+              <!-- Sat (Today) -->
+              <rect fill="#0369a1" height="56" rx="4" width="22" x="230" y="42"></rect>
+              <text fill="#0284c7" font-size="10" font-weight="800" x="237" y="112">S</text>
               
               <!-- Sun -->
-              <rect height="40" width="22" x="272" y="58"></rect>
-              <text x="279" y="112">S</text>
+              <rect fill="#bae6fd" height="40" rx="4" width="22" x="272" y="58"></rect>
+              <text fill="#94a3b8" font-size="10" font-weight="600" x="279" y="112">S</text>
             </svg>
           </div>
         </div>
 
-        <!-- Coach Insight Widget -->
-        <div>
-          <div>
-            <span class="material-symbols-outlined">psychology</span>
-            <h4>Coach Nour's Metabolic Insight</h4>
+        <!-- Coach Nutrition Note -->
+        <div class="rounded-2xl p-5 bg-gradient-to-tr from-sky-50 to-cyan-50 border border-sky-200/80 shadow-sm space-y-2">
+          <div class="flex items-center gap-2">
+            <span aria-hidden="true" class="material-symbols-outlined text-sky-700 text-lg">psychology</span>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-800">Coach Nour's Metabolic Insight</h4>
           </div>
-          <p>
+          <p class="text-xs text-slate-600 leading-relaxed">
             "Omar, your carbohydrate timing before tonight's 18:30 spin session is spot-on. The extra 32g from the Greek yogurt snack will provide fast muscle glycogen without insulin spike."
           </p>
         </div>
+
       </section>
+
     </div>
+
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div>
-      <div>
-        <div>
-          <span>99</span>
+  <!-- Unified Footer -->
+  <footer class="w-full bg-white/80 backdrop-blur-md border-t border-sky-200/70 py-6">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-full bg-sky-500 flex items-center justify-center">
+          <span class="text-xs text-white font-bold leading-none">99</span>
         </div>
-        <span>© 2026 Fit 99 Performance Ecosystem. Glacier Companion Framework.</span>
+        <span class="text-xs text-slate-500">© 2025 Fit 99 Performance Ecosystem. Glacier Companion Framework.</span>
       </div>
-      <div>
-        <a href="dashboard.html">Overview</a>
-        <a href="exercises.html">Workouts</a>
-        <a href="exercise-detail.html">Routine</a>
-        <a href="routine-builder.html">Builder</a>
-        <a href="nutrition.html">Nutrition</a>
-        <a href="food-log.html">Food Log</a>
-        <a href="profile.html">Profile</a>
-        <a href="index.html">Tour</a>
-        <a href="login.html">Cairo Gate</a>
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold text-slate-500">
+        <a class="hover:text-sky-600 transition-colors" href="dashboard.html">Overview</a>
+        <a class="hover:text-sky-600 transition-colors" href="exercises.html">Workouts</a>
+        <a class="hover:text-sky-600 transition-colors" href="exercise-detail.html">Routine</a>
+        <a class="hover:text-sky-600 transition-colors" href="routine-builder.html">Builder</a>
+        <a class="hover:text-sky-600 transition-colors" href="nutrition.html">Nutrition</a>
+        <a class="hover:text-sky-600 transition-colors" href="food-log.html">Food Log</a>
+        <a class="hover:text-sky-600 transition-colors" href="profile.html">Profile</a>
+        <a class="hover:text-sky-600 transition-colors" href="index.html">Tour</a>
+        <a class="hover:text-sky-600 transition-colors" href="login.html">Cairo Gate</a>
       </div>
     </div>
   </footer>
